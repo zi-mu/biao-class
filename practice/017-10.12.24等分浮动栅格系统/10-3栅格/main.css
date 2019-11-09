@@ -2,8 +2,6 @@
     box-sizing: border-box;
 }
 
-
-
 .row:before,
 .row:after {
     content: '';
@@ -15,6 +13,7 @@
 
 .col {
     float: left;
+
     border: solid;
 }
 
@@ -22,8 +21,16 @@
     width: 10%;
 }
 
+.col-10 {
+    width: 100%;
+}
+
 .col-2 {
     width: 20%;
+}
+
+.col-5 {
+    width: 50%;
 }
 
 .col-3 {
@@ -32,10 +39,6 @@
 
 .col-4 {
     width: 40%;
-}
-
-.col-5 {
-    width: 50%;
 }
 
 .col-6 {
@@ -52,8 +55,4 @@
 
 .col-9 {
     width: 90%;
-}
-
-.col-10 {
-    width: 100%;
 }
