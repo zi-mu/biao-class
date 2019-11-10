@@ -1,0 +1,49 @@
+* {
+    box-sizing: border-box;
+}
+
+.row::before,
+.row::after {
+    content: '';
+    display: block;
+    clear: both;
+    margin-bottom: 5px;
+
+}
+
+.col {
+    float: left;
+    border: solid;
+}
+
+.col-24 {
+    width: 100%;
+}
+
+.col-12 {
+    width: 50%;
+}
+
+.col-8 {
+    width: 33.3333333333%;
+}
+
+.col-6 {
+    width: 25%;
+}
+
+.col-4 {
+    width: 16.6666666667%;
+}
+
+.col-3 {
+    width: 12.5%;
+}
+
+.col-2 {
+    width: 8.3333333333%;
+}
+
+.col-1 {
+    width: 4.1666666667%;
+}
