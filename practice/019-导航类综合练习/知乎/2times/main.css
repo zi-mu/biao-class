@@ -4,15 +4,15 @@
 
 body {
     margin: 0;
-    font-family: sans-serif;
     background: #eee;
+    font-family: sans-serif;
 }
 
 a {
     text-decoration: none;
 }
 
-.row::before,
+.row:before,
 .row:after {
     content: '';
     display: block;
@@ -27,65 +27,78 @@ a {
     width: 25%;
 }
 
-.col-10 {
-    width: 41.6666666666%;
-}
-
 .col-8 {
     width: 33.33333333%;
+}
+
+.col-10 {
+    width: 41.66666666%;
 }
 
 .right {
     text-align: right;
 }
 
+.container {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .nav {
-    background: #fff;
     color: #456;
+    background: #fff;
 }
 
 .nav a {
     color: inherit;
-    padding: .3em;
+    padding: .5em;
     vertical-align: middle;
+}
+
+.hight-light {
+    padding-bottom: 10px;
+    border-bottom: 5px solid #09e;
 }
 
 input {
     padding: .3em;
-    width: 300px;
-    padding-left: 15px;
     outline: 0;
-    border: 1px solid #ccc;
-
     border-radius: 5px;
+    border: 1px solid #ccc;
+    padding-left: 15px;
+    width: 300px;
+}
 
+form {
+    padding: .1em;
+}
+
+input:focus {
+    border: 1px solid #aaa;
 }
 
 button {
     padding: .3em;
-    width: 100px;
-    border-radius: 5px;
-    background: #00e;
-    color: #fff;
     outline: 0;
-    border: 1px solid #00e;
+    border: 1px solid #09e;
+    border-radius: 5px;
+    background: #09f;
+    color: #fff;
+    width: 100px;
     position: relative;
-    right: 20px;
+    right: 30px;
 }
 
-.search>* {
-    /* display: inline-block; */
-    position: relative;
-    top: 7px;
-    right: 50px;
+.search svg {
     width: 25px;
-}
-
-.right a {
-    padding: 1em;
-}
-
-.right>* {
     position: relative;
-    top: 10px;
+    right: 45px;
+    top: 5px;
+}
+
+.right svg {
+    position: relative;
+    top: .5em;
+
 }
