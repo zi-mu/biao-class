@@ -1,4 +1,4 @@
-* {
+/* * {
     box-sizing: border-box;
 }
 
@@ -101,4 +101,113 @@ button {
     position: relative;
     top: .5em;
 
+} */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #eee;
+    font-family: sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+.row:before,
+.row:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.col {
+    float: left;
+}
+
+.col-6 {
+    width: 25%;
+}
+
+.col-8 {
+    width: 33.333333333333%;
+}
+
+.col-10 {
+    width: 41.666666666666%;
+}
+
+.right {
+    text-align: right;
+    position: relative;
+    top: .7em;
+}
+
+.right svg {
+    width: 30px;
+}
+
+.right a:first-of-type svg {
+    border: 2px solid transparent;
+    width: 30px;
+}
+
+
+.container {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.nav {
+    background: #fff;
+    color: #456;
+}
+
+.nav a {
+    display: inline-block;
+    color: inherit;
+    padding: .5em;
+    vertical-align: middle;
+}
+
+.nav span:first-child {
+    border-bottom: 3px solid #09e;
+    padding-bottom: 20px;
+}
+
+.nav form {
+    padding: .3em;
+    position: relative;
+    top: .3em;
+}
+
+.nav input {
+    padding: .5em;
+    outline: 0;
+    width: 300px;
+    border: 1px solid #eee;
+    padding-left: 15px;
+    border-radius: 5px;
+}
+
+.primary {
+    background: #09e;
+    padding: .5em;
+    border: 1px solid #09e;
+    border-radius: 5px;
+    width: 100px;
+    position: relative;
+    right: 30px;
+    color: #fff;
+}
+
+.search svg {
+    position: relative;
+    right: 45px;
+    top: 7px;
+    width: 25px;
 }
