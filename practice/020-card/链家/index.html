@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="main.css">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: sans-serif;
+        }
+
+        .row:before,
+        .row::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+        .col {
+            float: left;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+
+        .col-6 {
+            width: 25%;
+        }
+
+        .fl {
+            float: left;
+        }
+
+        .fr {
+            float: right;
+        }
+
+        .card {
+            background: #fff;
+            box-shadow: 0 0 3px rgba(0, 0, 0, .3);
+        }
+
+        .card img {
+            width: 100%;
+        }
+
+        .card .text {
+            padding: 10px;
+        }
+
+        .card .title {
+            font-weight: bold;
+        }
+
+        .muted {
+            opacity: .5;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="row">
+
+        <div class="col col-6">
+            <div class="card">
+                <div>
+                    <img src="https://dummyimage.com/600x400" alt="image">
+                </div>
+                <div class="text">
+                    <div class="title">远洋山水</div>
+                    <div class="row">
+                        <span class="price">64813元/平</span>
+                        <span class="muted fr">2003建</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col col-6">
+            <div class="card">
+                <div>
+                    <img src="https://dummyimage.com/600x400" alt="image">
+                </div>
+                <div class="text">
+                    <div class="title">远洋山水</div>
+                    <div class="row">
+                        <span class="price">64813元/平</span>
+                        <span class="muted fr">2003建</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col col-6">
+            <div class="card">
+                <div>
+                    <img src="https://dummyimage.com/600x400" alt="image">
+                </div>
+                <div class="text">
+                    <div class="title">远洋山水</div>
+                    <div class="row">
+                        <span class="price">64813元/平</span>
+                        <span class="muted fr">2003建</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col col-6">
+            <div class="card">
+                <div>
+                    <img src="https://dummyimage.com/600x400" alt="image">
+                </div>
+                <div class="text">
+                    <div class="title">远洋山水</div>
+                    <div class="row">
+                        <span class="price">64813元/平</span>
+                        <span class="muted fr">2003建</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
