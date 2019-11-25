@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: sans-serif;
+        }
+
+        img {
+            max-width: 100%;
+        }
+
+        .row:before,
+        .row:after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+        .muted {
+            opacity: .5;
+        }
+
+        .col {
+            float: left;
+            padding: 0 10px;
+        }
+
+        .col-6 {
+            width: 25%;
+        }
+
+        .card {
+            background: #fff;
+            box-shadow: 0 0 3px #666;
+        }
+
+        .thumbnail {
+            position: relative;
+        }
+
+
+        .promote {
+            position: absolute;
+            background: #f00;
+            width: 100px;
+            text-align: center;
+            top: 0;
+            left: 50%;
+            margin-left: -50px;
+            color: #fff;
+
+        }
+
+        .text {
+            text-align: center;
+            padding: 20px;
+
+        }
+
+        .text>* {
+            margin-bottom: 10px;
+        }
+
+        .title {
+            font-weight: bold;
+        }
+
+        .price {
+            color: tomato;
+            font-weight: bold;
+        }
+
+        .deleted {
+            text-decoration: line-through;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="row">
+        <div class="col col-6">
+            <div class="card">
+                <div class="thumbnail">
+                    <div>
+                        <img src="https://dummyimage.com/600x400" alt="image">
+                    </div>
+                    <span class="promote">减200元</span>
+                </div>
+                <div class="text">
+                    <div class="title">小米8 青春版 4GB+64GB</div>
+                    <div class="desc muted">潮流镜面渐变色,2400万自拍旗舰</div>
+                    <div>
+                        <span class="price">1399元</span>
+                        <span class="deleted muted">1599元</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col col-6">
+            <div class="card">
+                <div class="thumbnail">
+                    <div>
+                        <img src="https://dummyimage.com/600x400" alt="image">
+                    </div>
+                    <span class="promote">减200元</span>
+                </div>
+                <div class="text">
+                    <div class="title">小米8 青春版 4GB+64GB</div>
+                    <div class="desc muted">潮流镜面渐变色,2400万自拍旗舰</div>
+                    <div>
+                        <span class="price">1399元</span>
+                        <span class="deleted muted">1599元</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col col-6">
+            <div class="card">
+                <div class="thumbnail">
+                    <div>
+                        <img src="https://dummyimage.com/600x400" alt="image">
+                    </div>
+                    <span class="promote">减200元</span>
+                </div>
+                <div class="text">
+                    <div class="title">小米8 青春版 4GB+64GB</div>
+                    <div class="desc muted">潮流镜面渐变色,2400万自拍旗舰</div>
+                    <div>
+                        <span class="price">1399元</span>
+                        <span class="deleted muted">1599元</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col col-6">
+            <div class="card">
+                <div class="thumbnail">
+                    <div>
+                        <img src="https://dummyimage.com/600x400" alt="image">
+                    </div>
+                    <span class="promote">减200元</span>
+                </div>
+                <div class="text">
+                    <div class="title">小米8 青春版 4GB+64GB</div>
+                    <div class="desc muted">潮流镜面渐变色,2400万自拍旗舰</div>
+                    <div>
+                        <span class="price">1399元</span>
+                        <span class="deleted muted">1599元</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
