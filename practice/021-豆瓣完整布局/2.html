@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: sans-serif;
+            margin: 0;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        img {
+            max-width: 100%;
+        }
+
+        .col {
+            float: left;
+            /* padding: 10px;
+            border: 2px solid; */
+        }
+
+        .row:before,
+        .row:after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+        .col-24 {
+            width: 100%;
+        }
+
+        .col-23 {
+            width: 95.83333333333334%;
+        }
+
+        .col-22 {
+            width: 91.66666666666667%;
+        }
+
+        .col-21 {
+            width: 87.5%;
+        }
+
+        .col-20 {
+            width: 83.33333333333334%;
+        }
+
+        .col-19 {
+            width: 79.16666666666667%;
+        }
+
+        .col-18 {
+            width: 75%;
+        }
+
+        .col-17 {
+            width: 70.83333333333334%;
+        }
+
+        .col-16 {
+            width: 66.66666666666667%;
+        }
+
+        .col-15 {
+            width: 62.50000000000001%;
+        }
+
+        .col-14 {
+            width: 58.333333333333336%;
+        }
+
+        .col-13 {
+            width: 54.16666666666667%;
+        }
+
+        .col-12 {
+            width: 50%;
+        }
+
+        .col-11 {
+            width: 45.833333333333336%;
+        }
+
+        .col-10 {
+            width: 41.66666666666667%;
+        }
+
+        .col-9 {
+            width: 37.5%;
+        }
+
+        .col-8 {
+            width: 33.333333333333336%;
+        }
+
+        .col-7 {
+            width: 29.166666666666668%;
+        }
+
+        .col-6 {
+            width: 25%;
+        }
+
+        .col-5 {
+            width: 20.833333333333336%;
+        }
+
+        .col-4 {
+            width: 16.666666666666668%;
+        }
+
+        .col-3 {
+            width: 12.5%;
+        }
+
+        .col-2 {
+            width: 8.333333333333334%;
+        }
+
+        .col-1 {
+            width: 4.166666666666667%;
+        }
+
+        .text-right {
+            text-align: right;
+        }
+
+        .nav.global {
+            background: #444;
+            color: #ccc;
+        }
+
+        .nav.global a {
+            color: inherit;
+            padding: 5px;
+            display: inline-block;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="nav global">
+        <div class="row container">
+            <div class="col col-16">
+                <a href="#">豆瓣</a>
+                <a href="#">讀書</a>
+                <a href="#">電影</a>
+                <a href="#">音樂</a>
+                <a href="#">同城</a>
+                <a href="#">小組</a>
+                <a href="#">閱讀</a>
+                <a href="#">FM</a>
+                <a href="#">時間</a>
+                <a href="#">豆品</a>
+                <a href="#">更多</a>
+            </div>
+            <div class="col col-8 text-right">
+                <a href="#">下載豆瓣客戶端</a>
+                <a href="#">登錄/註冊</a>
+            </div>
+        </div>
+    </div>
+    <div class="main">
+        <div class="row nav page">
+            <div class="container">
+                <div class="col col-4 logo"></div>
+                <div class="col col-12 link-group"></div>
+                <div class="col col-8 search"></div>
+            </div>
+        </div>
+        <div>
+            <div class="container">
+                <h1 class="title">討論精選</h1>
+                <div class="row">
+                    <div class="col col-16">
+                        <div class="row">
+                            <div class="col col-4">
+                                <div class="like">
+                                    <div>8</div>
+                                    <div>喜歡</div>
+                                </div>
+                            </div>
+                            <div class="col col-20">
+                                <div class="title">佟湘玉是怎么对待生病员工的？</div>
+                                <div class="desc">
+                                    这两天被网易暴力裁员的事刷屏了，这让我既失望又气愤。失望的是我曾把网易当做互联网清流加以赞许，气愤的是网易居然做出这种下作的事：对待工作5年的患病员工，为了不按劳动法依法付赔偿金，恐吓加骚扰，各种恶劣手段无所...
+                                </div>
+                                <div class="info">
+                                    <span>来自武林外传十级学者小组</span>
+                                    <span>今天19:23</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col col-8">
+                        <div class="title">值得加入的小組</div>
+                        <div>
+                            <div class="row">
+                                <div class="col col-4">
+                                    <img src="https://dummyimage.com/300x300" alt="">
+                                </div>
+                                <div class="col col-20">
+                                    <a href="#">晒晒你最性感的照片</a>
+                                    <div>
+                                        <span>64222个万 小组官方公号微信：free2998</span>
+                                        <a href="#">+加入小组</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row footer">
+        <div class="container">
+            <div class="col col-12"></div>
+            <div class="col col-12"></div>
+        </div>
+    </div>
+</body>
+<script>
+    let x = 24;
+    let c = '';
+    while (--x) {
+        c += `.col-${x} {width:${100 / 24 * x}%;}\n`;
+    }
+    console.log(c);
+</script>
+
+</html>
