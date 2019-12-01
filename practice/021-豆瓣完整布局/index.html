@@ -24,6 +24,25 @@
             max-width: 100%;
         }
 
+        input,
+        button {
+            padding: 5px 10px;
+            border: 1px solid rgba(0, 0, 0, .15);
+            color: #444;
+            outline: 0;
+        }
+
+        input:focus,
+        button:focus {
+            border-color: #037b82;
+
+        }
+
+        input::placeholder {
+            color: #ccc;
+            padding-left: 5px;
+        }
+
         .row::before,
         .row::after {
             content: '';
@@ -159,6 +178,41 @@
         .nav.global a:hover {
             color: #fff;
         }
+
+        .nav.page {
+            background: #f0f6f3;
+        }
+
+        .nav.page .link-group a {
+            display: inline-block;
+            color: #037b82;
+            padding: 20px 10px;
+        }
+
+        .nav.page .link-group a:hover {
+            background: #037b82;
+            color: #fff;
+        }
+
+        .nav.page .search {
+            position: relative;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
+        .nav.page .search input {
+            width: 100%;
+        }
+
+        .nav.page .search button {
+            background: transparent;
+            border: none;
+            position: absolute;
+            right: 0;
+            top: 20px;
+            color: #ccc;
+
+        }
     </style>
 </head>
 
@@ -183,9 +237,23 @@
     <div class="main">
         <div class="row nav page">
             <div class="container">
-                <div class="col col-4 logo"></div>
-                <div class="col col-12 link-group"></div>
-                <div class="col col-8 search"></div>
+                <a href="#" class="col col-4 logo">
+                    <!-- <div class="logo" style="width:80%;height:50px;background-image:url(logo.png)"></div> -->
+                    <img src="./logo.png" style="margin-top:20px;width:120px;" alt="logo">
+                </a>
+                <div class="col col-12 link-group">
+                    <a href="#">精选</a>
+                    <a href="#">文化</a>
+                    <a href="#">行摄</a>
+                    <a href="#">娱乐</a>
+                    <a href="#">时尚</a>
+                    <a href="#">生活</a>
+                    <a href="#">科技</a>
+                </div>
+                <form class="col col-8 search text-right">
+                    <input type="text" placeholder="小组、话题">
+                    <button type="submit">搜</button>
+                </form>
             </div>
         </div>
         <div>
