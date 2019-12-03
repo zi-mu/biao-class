@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>index</title>
     <style>
         * {
             box-sizing: border-box;
@@ -14,9 +14,11 @@
         body {
             margin: 0;
             font-family: sans-serif;
+            color: #444;
         }
 
         a {
+            color: #037b82;
             text-decoration: none;
         }
 
@@ -43,6 +45,10 @@
             padding-left: 5px;
         }
 
+        h1 {
+            font-size: 40px;
+        }
+
         .row::before,
         .row::after {
             content: '';
@@ -50,10 +56,13 @@
             clear: both;
         }
 
+
+
         .col {
             float: left;
-            /* padding: 10px;
-            border: 2px solid; */
+            /* padding: 10px; */
+
+            /* border: 2px solid; */
         }
 
         .col-24 {
@@ -196,8 +205,8 @@
 
         .nav.page .search {
             position: relative;
-            padding-top: 20px;
-            padding-bottom: 20px;
+            margin-top: 17px;
+            /* padding-bottom: 20px; */
         }
 
         .nav.page .search input {
@@ -209,9 +218,68 @@
             border: none;
             position: absolute;
             right: 0;
-            top: 20px;
+            top: 1px;
             color: #ccc;
 
+        }
+
+        .activity .like {
+            padding: 5px 10px;
+            text-align: center;
+            display: inline-block;
+            color: #ca6445;
+            background: #fae9da;
+        }
+
+        .activity .info {
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 10px;
+        }
+
+        .activity .title:hover {
+            background: #037b82;
+            color: #fff;
+        }
+
+        .activity .detail>* {
+            margin: 10px 0;
+        }
+
+        .activity .desc {
+            padding: 10px;
+            background: #f8f8f8;
+            color: #aaa;
+        }
+
+        .activity .info {
+            color: #888;
+        }
+
+        .activity .info a {
+            color: #888;
+        }
+
+        .activity .info a:hover {
+            background: #037b82;
+            color: #fff;
+        }
+
+        .recommend {
+            padding-left: 20px;
+        }
+
+        .recommend .list {
+            padding: 10px 0;
+            border-bottom: 1px solid #ccc;
+
+        }
+
+        .recommend .list .col-18 {
+            padding-left: 10px;
+        }
+
+        .footer {
+            padding: 10px 0;
         }
     </style>
 </head>
@@ -261,29 +329,129 @@
                 <h1 class="title">讨论精选</h1>
                 <div class="row">
                     <div class="col col-16">
-                        <div class="row">
-                            <div class="col col-4">
+                        <div class="row activity">
+                            <div class="col col-3">
                                 <div class="like">
                                     <div>10</div>
                                     <div>喜欢</div>
                                 </div>
                             </div>
-                            <div class="col col-20">
-                                <div class="title">佟湘玉是怎么对待生病员工的？</div>
+                            <div class="col col-21 detail">
+                                <a class="title">佟湘玉是怎么对待生病员工的？</a>
                                 <div class="desc">
                                     这两天被网易暴力裁员的事刷屏了，这让我既失望又气愤。失望的是我曾把网易当做互联网清流加以赞许，气愤的是网易居然做出这种下作的事：对待工作5年的患病员工，为了不按劳动法依法付赔偿金，恐吓加骚扰，各种恶劣手段无所...
                                 </div>
                                 <div class="info">
-                                    <span>来自武林外传十级学者小组</span>
+                                    <span>来自<a href="#">武林外传十级学者小组</a> </span>
+                                    <span> 今天19:23</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row activity">
+                            <div class="col col-3">
+                                <div class="like">
+                                    <div>10</div>
+                                    <div>喜欢</div>
+                                </div>
+                            </div>
+                            <div class="col col-21 detail">
+                                <a class="title">佟湘玉是怎么对待生病员工的？</a>
+                                <div class="desc">
+                                    这两天被网易暴力裁员的事刷屏了，这让我既失望又气愤。失望的是我曾把网易当做互联网清流加以赞许，气愤的是网易居然做出这种下作的事：对待工作5年的患病员工，为了不按劳动法依法付赔偿金，恐吓加骚扰，各种恶劣手段无所...
+                                </div>
+                                <div class="info">
+                                    <span>来自<a href="#">武林外传十级学者小组</a> </span>
+                                    <span> 今天19:23</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row activity">
+                            <div class="col col-3">
+                                <div class="like">
+                                    <div>10</div>
+                                    <div>喜欢</div>
+                                </div>
+                            </div>
+                            <div class="col col-21 detail">
+                                <a class="title">佟湘玉是怎么对待生病员工的？</a>
+                                <div class="desc">
+                                    这两天被网易暴力裁员的事刷屏了，这让我既失望又气愤。失望的是我曾把网易当做互联网清流加以赞许，气愤的是网易居然做出这种下作的事：对待工作5年的患病员工，为了不按劳动法依法付赔偿金，恐吓加骚扰，各种恶劣手段无所...
+                                </div>
+                                <div class="info">
+                                    <span>来自<a href="#">武林外传十级学者小组</a> </span>
+                                    <span> 今天19:23</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row activity">
+                            <div class="col col-3">
+                                <div class="like">
+                                    <div>10</div>
+                                    <div>喜欢</div>
+                                </div>
+                            </div>
+                            <div class="col col-21 detail">
+                                <a class="title">佟湘玉是怎么对待生病员工的？</a>
+                                <div class="desc">
+                                    这两天被网易暴力裁员的事刷屏了，这让我既失望又气愤。失望的是我曾把网易当做互联网清流加以赞许，气愤的是网易居然做出这种下作的事：对待工作5年的患病员工，为了不按劳动法依法付赔偿金，恐吓加骚扰，各种恶劣手段无所...
+                                </div>
+                                <div class="info">
+                                    <span>来自<a href="#">武林外传十级学者小组</a> </span>
+                                    <span> 今天19:23</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row activity">
+                            <div class="col col-3">
+                                <div class="like">
+                                    <div>10</div>
+                                    <div>喜欢</div>
+                                </div>
+                            </div>
+                            <div class="col col-21 detail">
+                                <a class="title">佟湘玉是怎么对待生病员工的？</a>
+                                <div class="desc">
+                                    这两天被网易暴力裁员的事刷屏了，这让我既失望又气愤。失望的是我曾把网易当做互联网清流加以赞许，气愤的是网易居然做出这种下作的事：对待工作5年的患病员工，为了不按劳动法依法付赔偿金，恐吓加骚扰，各种恶劣手段无所...
+                                </div>
+                                <div class="info">
+                                    <span>来自<a href="#">武林外传十级学者小组</a> </span>
                                     <span> 今天19:23</span>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col col-8">
+                    <div class="col col-8 recommend">
                         <div class="title">值得加入的小组</div>
                         <div>
-                            <div class="row">
+                            <div class="row list">
+                                <div class="col col-6">
+                                    <img src="https://dummyimage.com/300x300" alt="image">
+                                </div>
+                                <div class="col col-18">
+                                    <a href="#" class="title">晒晒你最性感的照片</a>
+                                    <div>
+                                        <span>64222个万 小组官方公号微信：free2998</span>
+                                        <a href="#">+加入小组</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="row list">
+                                <div class="col col-6">
+                                    <img src="https://dummyimage.com/300x300" alt="image">
+                                </div>
+                                <div class="col col-18">
+                                    <a href="#" class="title">晒晒你最性感的照片</a>
+                                    <div>
+                                        <span>64222个万 小组官方公号微信：free2998</span>
+                                        <a href="#">+加入小组</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="row list">
                                 <div class="col col-6">
                                     <img src="https://dummyimage.com/300x300" alt="image">
                                 </div>
@@ -303,8 +471,17 @@
     </div>
     <div class="row footer">
         <div class="container">
-            <div class="col col-12"></div>
-            <div class="col col-12"></div>
+            <div class="col col-14">
+                © 2005－2019 douban.com, all rights reserved 北京豆网科技有限公司
+            </div>
+            <div class="col col-10">
+                <a href="#">在豆瓣工作 </a>
+                <a href="#">联系我们 </a>
+                <a href="#">法律声明 </a>
+                <a href="#">帮助中心 </a>
+                <a href="#">移动应用 </a>
+                <!-- <a href="#">豆瓣广告</a> -->
+            </div>
         </div>
     </div>
 </body>
