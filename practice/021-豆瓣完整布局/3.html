@@ -5,49 +5,57 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>3.html</title>
     <style>
         * {
             box-sizing: border-box;
         }
 
         body {
+            color: #666;
             margin: 0;
             font-family: sans-serif;
-
-        }
-
-        a {
-            text-decoration: none;
         }
 
         img {
             max-width: 100%;
         }
 
+        a {
+            color: #666;
+            text-decoration: none;
+        }
+
         input,
         button {
             padding: 5px;
-            border: 1px solid #ddd;
+            border: 1px solid #ccc;
+            color: #444;
             outline: 0;
-
         }
 
-        input::placeholder {
-            padding-left: 10px;
+        input:focus,
+        button:focus {
+            border: 1px solid darkcyan;
         }
 
         .row:before,
-        .row:after {
+        .row::after {
             content: '';
             display: block;
             clear: both;
         }
 
+        .row {
+            margin-left: -10px;
+        }
+
         .col {
             float: left;
-            /* padding: 10px; */
-            /* border: 2px solid; */
+            /* padding: 5px; */
+            /* border: 1px solid; */
+            padding-left: 10px;
+
         }
 
         .col-24 {
@@ -146,53 +154,53 @@
             width: 4.166666666666667%;
         }
 
+        .text-right {
+            text-align: right;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
         .nav.global {
             background: #444;
             color: #ccc;
         }
 
         .nav.global a {
-            color: inherit;
             display: inline-block;
-            padding: 2px 5px;
+            padding: 5px;
+            color: inherit;
         }
 
         .nav.global a:hover {
             color: #fff;
         }
 
-        .right {
-            text-align: right;
-        }
-
-        .container {
-            max-width: 1200px;
-
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        /*~~~~~~~~~~~*/
         .nav.page {
-            background: #f0f6f3;
-
+            background: #f0f3f9;
         }
 
         .nav.page .link-group a {
-            color: green;
-            margin: 25px 15px 15px;
             display: inline-block;
+            margin-top: 20px;
+            margin-left: 10px;
+            margin-bottom: 20px;
+            /* padding: 0 10px; */
+            color: darkcyan;
 
         }
 
         .nav.page .link-group a:hover {
-            background: green;
             color: #fff;
+            background: darkcyan;
         }
 
         .nav.page .search {
             position: relative;
-            padding-top: 20px;
+            padding-top: 15px;
             padding-bottom: 20px;
         }
 
@@ -202,11 +210,80 @@
 
         .nav.page .search button {
             position: absolute;
-            top: 20px;
-            background: transparent;
-            border: none;
             right: 0;
-            color: #ccc;
+
+            background: transparent;
+            border: 0;
+            color: #aaa;
+        }
+
+        .activity {
+            margin-bottom: ;
+        }
+
+        .activity .detail {
+            padding-right: 10px;
+        }
+
+        .activity .like {
+            background: #fefecc;
+            text-align: center;
+            color: tomato;
+            display: inline-block;
+            padding: 5px 10px;
+        }
+
+        .activity .detail>* {
+            margin: 10px 0;
+        }
+
+        .activity .title {
+            color: teal;
+        }
+
+        .activity .title:hover {
+            background: teal;
+            color: #fff;
+        }
+
+        .activity .desc {
+            background: #f6f6f6;
+            color: #aaa;
+            padding: 10px;
+        }
+
+        .activity .desc>:nth-child(2) {
+            padding-left: 10px;
+        }
+
+        .activity .info {
+            color: #aaa;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 10px;
+        }
+
+        .activity .info a {
+            color: #aaa;
+        }
+
+        .activity .info a:hover {
+            background: teal;
+            color: #fff;
+        }
+
+        .recommend {
+
+            margin-top: 10px;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 10px;
+        }
+
+        .recommend .desc>* {
+            margin: 5px;
+        }
+
+        .recommend .desc span {
+            padding-right: 10px;
         }
     </style>
 </head>
@@ -217,76 +294,134 @@
             <div class="col col-16">
                 <a href="#">豆瓣</a>
                 <a href="#">读书</a>
-                <a href="#">阅读</a>
-                <a href="#">同城</a>
                 <a href="#">电影</a>
-                <a href="#">小组</a>
-                <a href="#">FM</a>
-                <a href="#">豆品</a>
-                <a href="#">时间</a>
                 <a href="#">音乐</a>
+                <a href="#">同城</a>
+                <a href="#">小组</a>
+                <a href="#">阅读</a>
+                <a href="#">FM</a>
+                <a href="#">时间</a>
+                <a href="#">豆品</a>
                 <a href="#">更多</a>
             </div>
-            <div class="col col-8 right">
-                <a href="#">下载</a>
-                <a href="#">登录</a>
-                <a href="#">注册</a>
+            <div class="col col-8 text-right">
+                <a href="#">下载豆瓣客户端</a>
+                <a href="#">登录/注册</a>
             </div>
         </div>
     </div>
     <div class="row main">
         <div class="row nav page">
             <div class="container">
-                <div class="col col-4 logo">
-                    <img src="./logo.png" alt="" style="margin-top: 20px;width:120px;">
-                </div>
+                <a class="col col-4 logo">
+                    <img src="./logo.png" alt="image" style="margin-top: 20px;width:120px;">
+                </a>
                 <div class="col col-12 link-group">
-                    <a href="#">item</a>
-                    <a href="#">item</a>
-                    <a href="#">item</a>
-                    <a href="#">item</a>
-                    <a href="#">item</a>
+                    <a href="#">精选</a>
+                    <a href="#">文化</a>
+                    <a href="#">行摄</a>
+                    <a href="#">娱乐</a>
+                    <a href="#">时尚</a>
+                    <a href="#">生活</a>
+                    <a href="#">科技</a>
                 </div>
-                <div class="col col-8 search">
-                    <input type="text" placeholder="小组.话题">
-                    <button type="submit">搜</button>
-                </div>
+                <form class="col col-8 search text-right">
+                    <input type="text" placeholder="小组、话题">
+                    <button>搜</button>
+                </form>
             </div>
         </div>
         <div>
             <div class="container">
                 <h1 class="title">讨论精选</h1>
                 <div class="row">
-                    <div class="col col-16">
-                        <div class="row">
-                            <div class="col col-4">
+                    <div class="col col-18">
+                        <div class="row activity">
+                            <div class="col col-3">
                                 <div class="like">
-                                    <div>67</div>
+                                    <div>137</div>
                                     <div>喜欢</div>
                                 </div>
                             </div>
-                            <div class="col col-20">
-                                <div class="title">hhahah</div>
-                                <div class="desc">p..........</div>
+                            <div class="col col-21 detail">
+                                <a href='#' class="title">南京灵谷寺无梁殿</a>
+                                <div class="row desc">
+                                    <div class="col col-2">
+                                        <img src="https://dummyimage.com/70x70" alt="">
+                                    </div>
+                                    <div class="col col-22">
+                                        无梁殿，是中国历史最悠久、规模最大的砖砌拱券结构殿宇，建于1381年，整座建筑采用砖砌拱券结构、不设木梁。
+                                        无梁殿全用砖砌，不用寸钉片木，是中国国内现存同类建筑中时代最早、规模最大的...
+                                    </div>
+                                </div>
                                 <div class="info">
-                                    <span>comefrom</span>
-                                    <span>11:23</span>
+                                    <span>来自<a href="#">豆瓣小组</a></span>
+                                    <span>17:45</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row activity">
+                            <div class="col col-3">
+                                <div class="like">
+                                    <div>137</div>
+                                    <div>喜欢</div>
+                                </div>
+                            </div>
+                            <div class="col col-21 detail">
+                                <a href='#' class="title">南京灵谷寺无梁殿</a>
+                                <div class="row desc">
+                                    <div class="col col-2">
+                                        <img src="https://dummyimage.com/70x70" alt="">
+                                    </div>
+                                    <div class="col col-22">
+                                        无梁殿，是中国历史最悠久、规模最大的砖砌拱券结构殿宇，建于1381年，整座建筑采用砖砌拱券结构、不设木梁。
+                                        无梁殿全用砖砌，不用寸钉片木，是中国国内现存同类建筑中时代最早、规模最大的...
+                                    </div>
+                                </div>
+                                <div class="info">
+                                    <span>来自<a href="#">豆瓣小组</a></span>
+                                    <span>17:45</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row activity">
+                            <div class="col col-3">
+                                <div class="like">
+                                    <div>137</div>
+                                    <div>喜欢</div>
+                                </div>
+                            </div>
+                            <div class="col col-21 detail">
+                                <a href='#' class="title">南京灵谷寺无梁殿</a>
+                                <div class="row desc">
+                                    <div class="col col-2">
+                                        <img src="https://dummyimage.com/70x70" alt="">
+                                    </div>
+                                    <div class="col col-22">
+                                        无梁殿，是中国历史最悠久、规模最大的砖砌拱券结构殿宇，建于1381年，整座建筑采用砖砌拱券结构、不设木梁。
+                                        无梁殿全用砖砌，不用寸钉片木，是中国国内现存同类建筑中时代最早、规模最大的...
+                                    </div>
+                                </div>
+                                <div class="info">
+                                    <span>来自<a href="#">豆瓣小组</a></span>
+                                    <span>17:45</span>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col col-8">
-                        <div class="title">zhidejiarudexiaozu</div>
+
+                    <div class="col col-6 ">
+                        <div class="title">值得加入的小组</div>
                         <div>
-                            <div class="row">
+                            <div class="row recommend">
                                 <div class="col col-4">
-                                    <img src="https://dummyimage.com/300x300" alt="">
+                                    <img src="https://dummyimage.com/70x70" alt="image">
                                 </div>
-                                <div class="col col-20">
-                                    <a href="#">yueban</a>
+                                <div class="col col-20 desc">
+                                    <a href="#">北京同志们来租房</a>
                                     <div>
-                                        <span>563332</span>
-                                        <a href="#">加入小组</a>
+                                        <span>2073个成员</span>
+                                        <a href="#">+加入小组</a>
                                     </div>
                                 </div>
                             </div>
@@ -298,8 +433,17 @@
     </div>
     <div class="row footer">
         <div class="container">
-            <div class="col col-12"></div>
-            <div class="col col-12"></div>
+            <div class="col col-14">© 2005－2019 douban.com, all rights reserved 北京豆网科技有限公司</div>
+            <div class="col col-10">
+
+                <a href="#">豆瓣工作 </a>
+                <a href="#">联系我们 </a>
+                <a href="#">法律声明 </a>
+                <a href="#">帮助中心 </a>
+                <a href="#">移动应用 </a>
+                <a href="#"> 豆瓣广告</a>
+
+            </div>
         </div>
     </div>
 </body>
