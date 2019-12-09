@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>8</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            line-height: 1.2;
+            color: #444;
+            margin: 0;
+            font-family: sans-serif;
+        }
+
+        a {
+            text-decoration: none;
+            color: teal;
+        }
+
+        img {
+            max-width: 100%;
+        }
+
+        input {
+            padding: 10px;
+            color: #444;
+            outline: 0;
+        }
+
+        .row:before,
+        .row:after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+        .col {
+            float: left;
+            /* padding: 10px;
+            border: 1px solid; */
+        }
+
+        .col-24 {
+            width: 100%;
+        }
+
+        .col-23 {
+            width: 95.83333333333334%;
+        }
+
+        .col-22 {
+            width: 91.66666666666667%;
+        }
+
+        .col-21 {
+            width: 87.5%;
+        }
+
+        .col-20 {
+            width: 83.33333333333334%;
+        }
+
+        .col-19 {
+            width: 79.16666666666667%;
+        }
+
+        .col-18 {
+            width: 75%;
+        }
+
+        .col-17 {
+            width: 70.83333333333334%;
+        }
+
+        .col-16 {
+            width: 66.66666666666667%;
+        }
+
+        .col-15 {
+            width: 62.50000000000001%;
+        }
+
+        .col-14 {
+            width: 58.333333333333336%;
+        }
+
+        .col-13 {
+            width: 54.16666666666667%;
+        }
+
+        .col-12 {
+            width: 50%;
+        }
+
+        .col-11 {
+            width: 45.833333333333336%;
+        }
+
+        .col-10 {
+            width: 41.66666666666667%;
+        }
+
+        .col-9 {
+            width: 37.5%;
+        }
+
+        .col-8 {
+            width: 33.333333333333336%;
+        }
+
+        .col-7 {
+            width: 29.166666666666668%;
+        }
+
+        .col-6 {
+            width: 25%;
+        }
+
+        .col-5 {
+            width: 20.833333333333336%;
+        }
+
+        .col-4 {
+            width: 16.666666666666668%;
+        }
+
+        .col-3 {
+            width: 12.5%;
+        }
+
+        .col-2 {
+            width: 8.333333333333334%;
+        }
+
+        .col-1 {
+            width: 4.166666666666667%;
+        }
+
+        .text-right {
+            text-align: right;
+        }
+
+        .container {
+            max-width: 1350px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .nav.global {
+            background: #444;
+            color: #ccc;
+        }
+
+        .nav.global a {
+            color: inherit;
+            display: inline-block;
+            padding: 10px;
+        }
+
+        .nav.global a:hover {
+            color: #fff;
+        }
+
+        .nav.global a:first-child {
+            padding-left: 0;
+        }
+
+        .nav.global a:last-child {
+            padding-right: 0;
+        }
+
+        .nav.page {
+            background: #f1fef3;
+        }
+
+        .nav.page .link-group a {
+            display: inline-block;
+            padding: 30px 10px;
+
+        }
+
+        .nav.page .search {
+            position: relative;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        .nav.page .search input {
+            width: 100%;
+        }
+
+        .nav.page .search span svg {
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            width: 30px;
+            height: 30px;
+        }
+
+        h1 {
+            font-size: 40px;
+        }
+
+        .activity {
+            padding-bottom: 15px;
+        }
+
+        .activity .like {
+            background: #fae9da;
+            color: tomato;
+            display: inline-block;
+            padding: 15px 15px;
+            text-align: center;
+        }
+
+        .activity .detail {
+            padding-right: 20px;
+        }
+
+        .activity .detail>* {
+            margin: 10px 0;
+        }
+
+        .activity .title:hover {
+            background: teal;
+            color: #fff;
+        }
+
+        .activity .desc {
+            background: #f8f8f8;
+            padding: 10px;
+            color: #aaa;
+        }
+
+        .activity .desc>:nth-child(2) {
+            padding-left: 10px;
+        }
+
+        .activity .info {
+            color: #888;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 10px;
+        }
+
+        .recommend {
+            margin-top: 10px;
+            padding-top: 10px;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 10px;
+        }
+
+        .recommend:first-child {
+            border-top: 1px solid #ccc;
+        }
+
+        .recommend>:nth-child(2) {
+            padding-left: 10px;
+        }
+
+        .recommend>:nth-child(2)>* {
+            margin: 5px 0;
+        }
+
+        .footer {
+            padding: 20px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="nav global">
+        <div class="row container">
+            <div class="col col-16">
+                <a href="#">豆瓣</a>
+                <a href="#">读书</a>
+                <a href="#">电影</a>
+                <a href="#">音乐</a>
+                <a href="#">同城</a>
+                <a href="#">小组</a>
+                <a href="#">阅读</a>
+                <a href="#">FM</a>
+                <a href="#">时间</a>
+                <a href="#">豆品</a>
+                <a href="#">更多</a>
+            </div>
+            <div class="col col-8 text-right">
+                <a href="#">下载豆瓣客户端</a>
+                <a href="#">登录/注册</a>
+            </div>
+        </div>
+    </div>
+    <div class="main">
+        <div class="row nav page">
+            <div class="container">
+                <div class="col col-4 logo">
+                    <img src="./logo.png" style="width:120px;margin-top:25px;">
+                </div>
+                <div class="col col-12 link-group">
+                    <a href="#">精选</a>
+                    <a href="#">文化</a>
+                    <a href="#">行摄</a>
+                    <a href="#">娱乐</a>
+                    <a href="#">时尚</a>
+                    <a href="#">生活</a>
+                    <a href="#">科技</a>
+                </div>
+                <form class="col col-8 search text-right">
+                    <input type="text" placeholder="小组、话题">
+                    <span><svg t="1575898237108" class="icon" viewBox="0 0 1024 1024" version="1.1"
+                            xmlns="http://www.w3.org/2000/svg" p-id="2335" width="200" height="200">
+                            <path
+                                d="M927.104 866.816l-195.626667-208.768C780.629333 601.770667 810.666667 528.426667 810.666667 448 810.666667 271.530667 667.136 128 490.666667 128S170.666667 271.530667 170.666667 448 314.197333 768 490.666667 768c65.322667 0 126.08-19.754667 176.768-53.461333l197.461333 210.688L927.104 866.816zM256 448C256 318.592 361.258667 213.333333 490.666667 213.333333S725.333333 318.592 725.333333 448 620.074667 682.666667 490.666667 682.666667 256 577.408 256 448z"
+                                p-id="2336" fill="#dbdbdb"></path>
+                        </svg></span>
+                </form>
+            </div>
+        </div>
+        <div>
+            <div class="container">
+                <h1 class="title">讨论精选</h1>
+                <div class="row">
+                    <div class="col col-17">
+                        <div class="row activity">
+                            <div class="col col-3">
+                                <div class="like">
+                                    <div>890</div>
+                                    <div>喜欢</div>
+                                </div>
+                            </div>
+                            <div class="col col-21 detail">
+                                <a href="#" class="title">今天出去堆雪人感觉受到了嘲讽</a>
+                                <div class="row desc">
+                                    <div class="col col-3">
+                                        <img src="https://dummyimage.com/100x100">
+                                    </div>
+                                    <div class="col col-21">营销号偷别人照片真恶心！@阿粪青 本身堆了个可可爱爱的雪娃娃，就跑去公园玩啦 结果出来的时候，莫名其妙旁边多了一家三口
+                                        我的雪人感觉都不太开心了</div>
+                                </div>
+                                <div class="info">
+                                    <span>来自哈哈哈哈哈哈哈小组</span>
+                                    <span>12-03</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row activity">
+                            <div class="col col-3">
+                                <div class="like">
+                                    <div>890</div>
+                                    <div>喜欢</div>
+                                </div>
+                            </div>
+                            <div class="col col-21 detail">
+                                <a href="#" class="title">今天出去堆雪人感觉受到了嘲讽</a>
+                                <div class="row desc">
+                                    <div class="col col-3">
+                                        <img src="https://dummyimage.com/100x100">
+                                    </div>
+                                    <div class="col col-21">营销号偷别人照片真恶心！@阿粪青 本身堆了个可可爱爱的雪娃娃，就跑去公园玩啦 结果出来的时候，莫名其妙旁边多了一家三口
+                                        我的雪人感觉都不太开心了</div>
+                                </div>
+                                <div class="info">
+                                    <span>来自哈哈哈哈哈哈哈小组</span>
+                                    <span>12-03</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row activity">
+                            <div class="col col-3">
+                                <div class="like">
+                                    <div>890</div>
+                                    <div>喜欢</div>
+                                </div>
+                            </div>
+                            <div class="col col-21 detail">
+                                <a href="#" class="title">今天出去堆雪人感觉受到了嘲讽</a>
+                                <div class="row desc">
+                                    <div class="col col-3">
+                                        <img src="https://dummyimage.com/100x100">
+                                    </div>
+                                    <div class="col col-21">营销号偷别人照片真恶心！@阿粪青 本身堆了个可可爱爱的雪娃娃，就跑去公园玩啦 结果出来的时候，莫名其妙旁边多了一家三口
+                                        我的雪人感觉都不太开心了</div>
+                                </div>
+                                <div class="info">
+                                    <span>来自哈哈哈哈哈哈哈小组</span>
+                                    <span>12-03</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col col-7">
+                        <div class="title">值得加入的小组</div>
+                        <div>
+                            <div class="row recommend">
+                                <div class="col col-3">
+                                    <img src="https://dummyimage.com/100x100" alt="">
+                                </div>
+                                <div class="col col-21">
+                                    <a href="#">猫</a>
+                                    <div>
+                                        <span>298989个间谍</span>
+                                        <a href="#">+加入小组</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row recommend">
+                                <div class="col col-3">
+                                    <img src="https://dummyimage.com/100x100" alt="">
+                                </div>
+                                <div class="col col-21">
+                                    <a href="#">猫</a>
+                                    <div>
+                                        <span>298989个间谍</span>
+                                        <a href="#">+加入小组</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row recommend">
+                                <div class="col col-3">
+                                    <img src="https://dummyimage.com/100x100" alt="">
+                                </div>
+                                <div class="col col-21">
+                                    <a href="#">猫</a>
+                                    <div>
+                                        <span>298989个间谍</span>
+                                        <a href="#">+加入小组</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row footer">
+        <div class="container">
+            <div class="col col-12">© 2005－2019 douban.com, all rights reserved 北京豆网科技有限公司</div>
+            <div class="col col-12">
+                <a href="#">关于豆瓣</a>
+                <a href="#">在豆瓣工作</a>
+                <a href="#">联系我们</a>
+                <a href="#">法律声明</a>
+                <a href="#">帮助中心</a>
+                <a href="#">移动应用</a>
+                <a href="#">豆瓣广告</a>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    let x = 24;
+    let c = '';
+    while (--x) {
+        c += `.col-${x} {width:${100 / 24 * x}%;}\n`
+    }
+    console.log(c);
+</script>
+
+</html>
