@@ -34,7 +34,7 @@
     }
 
     .block {
-      max-width: 100%;
+      width: 100%;
       display: block;
     }
 
@@ -452,15 +452,30 @@
 
     .slogan {
       color: #fff;
-
+      padding-top: 50px;
+      padding-bottom: 5 0px;
       background-image: url(./image/slogan-bg.jpg);
       background-repeat: no-repeat;
       background-position: center center;
       background-size: cover;
     }
 
-    .slogan form {
+    .slogan .col:first-child>* {
+      margin-bottom: 10px;
+    }
+
+    .slogan .right>* {
+      margin-bottom: 10px;
+    }
+
+    .slogan .query {
       position: relative;
+    }
+
+    .slogan .query button {
+      position: absolute;
+      top: 0;
+      right: 0;
     }
   </style>
 </head>
@@ -825,17 +840,19 @@
 
       </div>
     </div>
-    <div class="row slogan">
-      <div class="container">
+    <div class="slogan">
+      <div class="row container">
         <div class="col col-12">
           <div class="title">链家真实房源</div>
           <div class="sub-title">不是嘴上说说就可以</div>
         </div>
-        <div class="col col-12">
-          <div> 真实存在，真实在售，真实价格，真实图片！</div>
-          <div>链家郑重向用户承诺：真实房源，假一赔百元！ </div>
+        <div class="col col-12 right">
+          <div>
+            <div> 真实存在，真实在售，真实价格，真实图片！</div>
+            <div>链家郑重向用户承诺：真实房源，假一赔百元！ </div>
+          </div>
           <form class="query">
-            <input type="text" placeholder="请输入链家编号查询真伪...">
+            <input type="text" class="block" placeholder="请输入链家编号查询真伪...">
             <button>搜</button>
           </form>
         </div>
