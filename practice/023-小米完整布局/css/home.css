@@ -1,0 +1,55 @@
+.nav.page {
+    /* background: #000; */
+}
+
+.logo {
+    width: 70px;
+    height: 70px;
+    background: tomato;
+    background-image: url(../image/logo.png);
+    background-size: contain;
+    background-position: center;
+}
+
+.doodle {
+    width: 160px;
+}
+
+.img-group,
+.nav.page .search input {
+    margin-top: 30px;
+
+}
+
+.nav.page .link-group a {
+    display: inline-block;
+    padding: 50px 20px;
+    /* background: #000; */
+    color: inherit;
+    font-size: 2rem;
+}
+
+.nav.page .link-group a:hover {
+    color: tomato;
+}
+
+.nav.page .search input {
+    width: 320px;
+}
+
+.nav.page .search {
+    position: relative;
+}
+
+.nav.page .search .rec-group {
+    position: absolute;
+    top: 52px;
+    right: 98px;
+}
+
+.nav.page .search .rec-group .rec {
+    background: #ddd;
+    padding: 5px;
+
+    margin-left: 10px;
+}
