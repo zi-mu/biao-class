@@ -11,6 +11,10 @@
     background-position: center;
 }
 
+.first-screen>* {
+    margin-bottom: 20px;
+}
+
 .doodle {
     width: 160px;
 }
@@ -19,6 +23,10 @@
 .nav.page .search input {
     margin-top: 30px;
 
+}
+
+.nav.page {
+    margin-bottom: 0;
 }
 
 .nav.page .link-group a {
@@ -123,4 +131,29 @@
 .slider .navigator .next {
     right: 0;
     background-position: -125px 3px;
+}
+
+.shortcuts {
+    padding: 17px 0;
+    text-align: center;
+    background: #888;
+    color: #fff;
+
+
+}
+
+.shortcuts>* {
+    padding: 10px;
+}
+
+.shortcuts>*>* {
+    margin: 10px 0;
+}
+
+.top-promote .container>* {
+    padding-left: 20px;
+}
+
+.top-promote .container>:first-child {
+    padding-left: 0;
 }
