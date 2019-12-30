@@ -56,3 +56,86 @@ button:focus {
 .nav.global .right a:nth-last-child(2):after {
     display: none;
 }
+
+.cat-box .title .left {
+    margin-top: 50px;
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.cat-box .card-group>* {
+    padding-left: 20px;
+}
+
+.cat-box .card {
+    text-align: center;
+    background: #fff;
+    padding: 20px 40px;
+    margin-bottom: 20px;
+}
+
+.cat-box .card .thumbnail {
+    padding: 20px 40px;
+}
+
+.cat-box .card .text>* {
+    margin-bottom: 11px;
+}
+
+.cat-box .card .desc {
+    color: #aaa;
+}
+
+.cat-box .card .price {
+    color: tomato;
+}
+
+.cat-box .card .original {
+    padding-left: 20px;
+    color: #aaa;
+    text-decoration: line-through;
+
+}
+
+.footer {
+    background: #fff;
+
+}
+
+.footer .info .support>* {
+    text-align: center;
+    padding: 40px;
+    font-size: 1.8em;
+    border-bottom: 1px solid #eee;
+}
+
+
+
+.footer .link a {
+    display: block;
+}
+
+.footer .info .link-group {
+    border-right: 1px solid #eee;
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+}
+
+.footer .info .link-group h2,
+.footer .info .link-group a {
+    color: #666;
+}
+
+.footer .info .service {
+    text-align: center;
+}
+
+.footer .info .service .title {
+    color: tomato;
+    font-size: 3em;
+    font-weight: 300;
+    padding-top: 50px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
