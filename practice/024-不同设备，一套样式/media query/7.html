@@ -1,0 +1,70 @@
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        background: #eee;
+        margin: 0;
+        padding: 0;
+    }
+
+    .row::before,
+    .row::after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+
+    .col {
+        padding: 10px;
+        float: left;
+        width: 25%;
+    }
+
+    .card {
+        background: #fff;
+        padding: 10px;
+    }
+</style>
+
+<style media="screen and (max-width:1000px)">
+    .col {
+        width: 50%;
+    }
+</style>
+<style media="screen and (max-width:500px)">
+    .col {
+        width: 100%;
+    }
+</style>
+<div class="row">
+    <div class="col">
+        <div class="card">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet deleniti voluptates accusantium quasi ullam,
+            animi consectetur, pariatur sint alias, ipsam non ab aperiam tempore consequuntur exercitationem maiores cum
+            perferendis tenetur?
+        </div>
+    </div>
+    <div class="col">
+        <div class="card">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet deleniti voluptates accusantium quasi ullam,
+            animi consectetur, pariatur sint alias, ipsam non ab aperiam tempore consequuntur exercitationem maiores cum
+            perferendis tenetur?
+        </div>
+    </div>
+    <div class="col">
+        <div class="card">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet deleniti voluptates accusantium quasi ullam,
+            animi consectetur, pariatur sint alias, ipsam non ab aperiam tempore consequuntur exercitationem maiores cum
+            perferendis tenetur?
+        </div>
+    </div>
+    <div class="col">
+        <div class="card">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet deleniti voluptates accusantium quasi ullam,
+            animi consectetur, pariatur sint alias, ipsam non ab aperiam tempore consequuntur exercitationem maiores cum
+            perferendis tenetur?
+        </div>
+    </div>
+</div>

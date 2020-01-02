@@ -1,0 +1,65 @@
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        background: #eee;
+        margin: 0;
+        padding: 0;
+    }
+
+    .row::before,
+    .row::after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+
+    .col {
+        float: left;
+        padding: 10px;
+        width: 25%;
+    }
+
+    .card {
+        background: #fff;
+        padding: 10px;
+    }
+</style>
+<style media="screen and (max-width:800px)">
+    .col {
+        width: 50%;
+    }
+</style>
+<style media="screen and (max-width:500px)">
+    .col {
+        width: 100%;
+    }
+</style>
+<div class="row">
+    <div class="col">
+        <div class="card">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia sit excepturi deserunt aperiam cumque impedit
+            nostrum ut suscipit quidem hic. Placeat quod, fugiat aut enim ullam a harum sunt? Cum.
+        </div>
+    </div>
+    <div class="col">
+        <div class="card">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia sit excepturi deserunt aperiam cumque impedit
+            nostrum ut suscipit quidem hic. Placeat quod, fugiat aut enim ullam a harum sunt? Cum.
+        </div>
+    </div>
+    <div class="col">
+        <div class="card">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia sit excepturi deserunt aperiam cumque impedit
+            nostrum ut suscipit quidem hic. Placeat quod, fugiat aut enim ullam a harum sunt? Cum.
+        </div>
+    </div>
+    <div class="col">
+        <div class="card">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia sit excepturi deserunt aperiam cumque impedit
+            nostrum ut suscipit quidem hic. Placeat quod, fugiat aut enim ullam a harum sunt? Cum.
+        </div>
+    </div>
+</div>

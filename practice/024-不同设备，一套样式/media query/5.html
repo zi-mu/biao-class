@@ -1,0 +1,62 @@
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        margin: 0;
+        padding: 0;
+        background: #eee;
+    }
+
+    .row::before,
+    .row::after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+
+    .col {
+        float: left;
+        width: 25%;
+        padding: 10px;
+    }
+
+    .card {
+        padding: 10px;
+        background: #fff;
+    }
+</style>
+
+<style media="screen and (max-width:700px)">
+    .col {
+        width: 50%;
+    }
+</style>
+<style media="screen and (max-width:400px)">
+    .col {
+        width: 100%;
+    }
+</style>
+<div class="row">
+    <div class="col">
+        <div class="card">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae quisquam aliquam sunt odit
+            distinctio autem magni iste, obcaecati vel saepe aut? Est quam accusantium placeat voluptatibus expedita.
+            Nisi, eum sequi?</div>
+    </div>
+    <div class="col">
+        <div class="card">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae quisquam aliquam sunt odit
+            distinctio autem magni iste, obcaecati vel saepe aut? Est quam accusantium placeat voluptatibus expedita.
+            Nisi, eum sequi?</div>
+    </div>
+    <div class="col">
+        <div class="card">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae quisquam aliquam sunt odit
+            distinctio autem magni iste, obcaecati vel saepe aut? Est quam accusantium placeat voluptatibus expedita.
+            Nisi, eum sequi?</div>
+    </div>
+    <div class="col">
+        <div class="card">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae quisquam aliquam sunt odit
+            distinctio autem magni iste, obcaecati vel saepe aut? Est quam accusantium placeat voluptatibus expedita.
+            Nisi, eum sequi?</div>
+    </div>
+</div>

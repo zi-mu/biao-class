@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background: #eee;
+        }
+
+        .row::before,
+        .row::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+        .col {
+            float: left;
+            padding: 10px;
+            width: 25%;
+
+        }
+
+        .card {
+            background: #fff;
+            padding: 10px;
+        }
+    </style>
+    <style media="screen and (max-width:1000px)">
+        .col {
+            width: 50%;
+        }
+    </style>
+    <style media="screen and (max-width:400px)">
+        .col {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="row">
+        <div class="col">
+            <div class="card">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam veritatis expedita enim quia
+                repellendus. Itaque, sit. Nemo beatae est et, aperiam cupiditate distinctio ut provident accusantium
+                voluptate. Odit, consequuntur nemo.
+            </div>
+        </div>
+        <div class="col">
+            <div class="card">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam veritatis expedita enim quia
+                repellendus. Itaque, sit. Nemo beatae est et, aperiam cupiditate distinctio ut provident accusantium
+                voluptate. Odit, consequuntur nemo.
+            </div>
+        </div>
+        <div class="col">
+            <div class="card">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam veritatis expedita enim quia
+                repellendus. Itaque, sit. Nemo beatae est et, aperiam cupiditate distinctio ut provident accusantium
+                voluptate. Odit, consequuntur nemo.
+            </div>
+        </div>
+        <div class="col">
+            <div class="card">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam veritatis expedita enim quia
+                repellendus. Itaque, sit. Nemo beatae est et, aperiam cupiditate distinctio ut provident accusantium
+                voluptate. Odit, consequuntur nemo.
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
