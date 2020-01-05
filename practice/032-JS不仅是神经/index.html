@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        h1 {
+            color: tomato;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1>Yo</h1>
+</body>
+<script>
+    //直接在script中写js
+    let el = document.createElement('h1');
+    el.innerText = 'haha';
+    el.style.color = 'green';
+
+    document.body.appendChild(el);
+
+    let h = document.querySelector('h1');
+    h.style.background = 'yellow';
+    h.style.width = '100px';
+    h.style.border = '1px solid black';
+    h.style.textAlign = 'center';
+    setInterval(() => {
+        h.hidden = !h.hidden;
+    }, 1000)
+
+
+
+</script>
+<script src="main.js"></script>
+
+
+
+</html>
