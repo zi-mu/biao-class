@@ -72,7 +72,6 @@
 //     return arr;
 // }
 // console.log(getRich(200));
-let list = ['a1', 'a2', ['b1', 'b2', ['c1', 'c2', 'c3'], 'b3'], 'a3'];
 
 //1.两数之和;
 // function add(a, b) {
@@ -147,13 +146,13 @@ let list = ['a1', 'a2', ['b1', 'b2', ['c1', 'c2', 'c3'], 'b3'], 'a3'];
 
 // printer(arr, breaker) 会分别打印数组arr中的每一项，且只打印breaker以前的元素
 
-let list1 = [
-    '王花花',
-    '刘备备',
-    '李拴蛋',
-    '赵克爽',
+// let list1 = [
+//     '王花花',
+//     '刘备备',
+//     '李拴蛋',
+//     '赵克爽',
 
-];
+// ];
 
 // function printer(arr, breaker) {
 //     for (let i = 0; i < arr.length; i++) {
@@ -175,13 +174,102 @@ let list1 = [
 //     }
 // }
 // printer(list1, '赵克爽');
-function printer(arr, user) {
-    for (let i = 0; i < arr.length; i++) {
-        let it = arr[i];
-        if (it === user)
-            break;
+// function printer(arr, user) {
+//     for (let i = 0; i < arr.length; i++) {
+//         let it = arr[i];
+//         if (it === user)
+//             break;
 
-        console.log(it);
-    }
-}
-printer(list1, '赵克爽');
+//         console.log(it);
+//     }
+// }
+// printer(list1, '赵克爽');
+
+// function printer(arr, person) {
+//     for (let i = 0; i < arr.length; i++) {
+//         if (arr[i] === person)
+//             break;
+//         console.log(arr[i]);
+//     }
+// }
+// printer(list1, '刘备备')
+
+// function printer(arr, person) {
+//     for (let i = 0; i < arr.length; i++) {
+//         if (arr[i] === person)
+//             break;
+//         console.log(arr[i]);
+//     }
+// }
+// printer(list1, '赵克爽')
+// printer(list1, '赵克爽')
+
+// function printer(arr, user) {
+//     for (let i = 0; i < arr.length; i++) {
+//         let it = arr[i];
+//         if (it === user)
+//             break;
+//         console.log(it);
+//     }
+// }
+
+
+let list = [
+    '王花花',
+    '刘备备',
+    '李拴蛋',
+    '赵克爽',
+
+];
+// printer(list, '刘备备')
+
+// function printer(arr, jumper) {
+//     for (let i = 0; i < arr.length; i++) {
+//         if (arr[i] === jumper)
+//             continue;
+//         console.log(arr[i]);
+//     }
+// }
+
+// function printer(arr, jumper) {
+//     for (let i = 0; i < arr.length; i++) {
+//         if (arr[i] === jumper)
+//             continue;
+
+//         console.log(arr[i]);
+//     }
+// }
+// printer(list, '李拴蛋');
+
+// function printer(arr, jumper) {
+//     for (let i = 0; i < arr.length; i++) {
+//         if (arr[i] === jumper)
+//             continue;
+
+//         console.log(arr[i]);
+//     }
+// }
+// printer(list, '李拴蛋');
+
+// function printer(arr, jumper) {
+//     for (let i = 0; i < arr.length; i++) {
+//         if (arr[i] === jumper)
+//             continue;
+
+//         console.log(arr[i]);
+//     }
+// }
+// printer(list, '王花花');
+
+// function printer(arr, jumper) {
+//     for (let i = 0; i < arr.length; i++) {
+//         if (arr[i] === jumper)
+//             continue;
+
+//         console.log(arr[i]);
+//     }
+// }
+// printer(list, '李拴蛋');
+
+
+// let list = ['a1', 'a2', ['b1', 'b2', ['c1', 'c2', 'c3'], 'b3'], 'a3'];
