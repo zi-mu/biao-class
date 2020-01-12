@@ -214,13 +214,13 @@
 // }
 
 
-let list = [
-    '王花花',
-    '刘备备',
-    '李拴蛋',
-    '赵克爽',
+// let list = [
+//     '王花花',
+//     '刘备备',
+//     '李拴蛋',
+//     '赵克爽',
 
-];
+// ];
 // printer(list, '刘备备')
 
 // function printer(arr, jumper) {
@@ -270,6 +270,227 @@ let list = [
 //     }
 // }
 // printer(list, '李拴蛋');
+
+// function printer(arr, jumper) {
+//     for (let i = 0; i < arr.length; i++) {
+//         if (arr[i] === jumper)
+//             continue;
+//         console.log(arr[i]);
+//     }
+// }
+// printer(list, '王花花');
+
+// function printer(arr, jumper) {
+//     for (let i = 0; i < arr.length; i++) {
+//         let it = arr[i];
+//         if (it === jumper)
+//             continue;
+//         console.log(it);
+//     }
+// }
+// printer(list, '刘备备');
+
+// let list = [
+//     '王花花',
+//     '李拴蛋',
+//     '赵可爽',
+// ];
+// let str = '';
+
+// function glue(arr) {
+//     for (let i = 0; i < arr.length; i++) {
+//         str += arr[i];
+//     }
+//     console.log(str);
+// }
+// glue(list);
+
+
+// function glue(arr) {
+//     for (let i = 0; i < arr.length; i++) {
+//         str = str + arr[i];
+//     }
+//     console.log(str);
+// }
+// glue(list);
+// glue(list);
+
+// function glue(arr) {
+//     for (let i = 0; i < arr.length; i++) {
+//         str += arr[i];
+//     }
+//     console.log(str);
+// }
+
+// function glue(arr) {
+//     for (let i = 0; i < arr.length; i++) {
+//         str = str + arr[i];
+//     }
+//     return str;
+// }
+// console.log(glue(list));
+
+// function glue(arr) {
+//     for (let i = 0; i < arr.length; i++) {
+//         str += arr[i];
+//     }
+//     console.log(str);
+// }
+// glue(list);
+
+// function glue(arr) {
+//     for (let i = 0; i < arr.length; i++) {
+//         let it = arr[i];
+//         str += it + ' ';
+//     }
+//     return str;
+// }
+// console.log(glue(list));
+// function glue(arr) {
+//     for (let i = 0; i < arr.length; i++) {
+//         let it = arr[i] + ' ';
+//         str += it;
+//     }
+//     return str;
+// }
+// console.log(glue(list));
+// function glue(arr) {
+//     for (let i = 0; i < arr.length; i++) {
+//         let connector = ',';
+//         let it = arr[i];
+
+//         if (i === arr.length - 1)
+//             connector = '';
+
+//         str += it + connector;
+//     }
+//     return str;
+// }
+// console.log(glue(list));
+
+// function glue(arr) {
+//     for (let i = 0; i < arr.length; i++) {
+//         let item = arr[i];
+//         let connector = ',';
+//         if (i === arr.length - 1)
+//             connector = '';
+
+//         str += item + connector;
+//     }
+//     return str;
+// }
+// console.log(glue(list));
+
+// function glue(arr) {
+//     for (let i = 0; i < arr.length; i++) {
+//         let it = arr[i];
+
+//         let connector = ',';
+//         if (i === arr.length - 1)
+//             connector = '';
+
+//         str += it + connector;
+//     }
+//     return str;
+// }
+// console.log(glue(list));
+
+
+// function glue(arr, connector) {
+//     for (let i = 0; i < arr.length; i++) {
+//         let it = arr[i];
+//         if (i === arr.length - 1)
+//             connector = '';
+//         str += it + connector;
+//     }
+//     console.log(str);
+// }
+// glue(list, ',');
+
+// let list = [
+//     '王花花',
+//     '李拴蛋',
+//     '赵可爽',
+// ];
+
+// function glue(arr, connector) {
+//     let str = '';
+//     let length = arr.length;
+//     for (let i = 0; i < length; i++) {
+//         if (i === length - 1)
+//             connector = '';
+
+//         str += arr[i] + connector;
+//     }
+//     return str;
+// }
+// console.log(glue(list, ','));
+
+// function glue(arr, connector) {
+//     let str = '';
+//     for (let i = 0; i < arr.length; i++) {
+//         if (i === arr.length - 1)
+//             connector = '';
+//         str += arr[i] + connector
+//     }
+//     console.log(str);
+// }
+// glue(list, ',');
+
+// function glue(arr, connector) {
+//     let str = '';
+//     for (let i = 0; i < arr.length; i++) {
+//         if (i === arr.length - 1)
+//             connector = '';
+//         str += arr[i] + connector;
+//     }
+//     console.log(str);
+// }
+// glue(list, ',')
+
+// function glue(arr, connector) {
+//     let str = '';
+//     for (let i = 0; i < arr.length; i++) {
+//         if (i === arr.length - 1)
+//             connector = '';
+//         str += arr[i] + connector;
+//     }
+//     console.log(str);
+// }
+// glue(list, ',');
+
+// function glue(arr, connector) {
+//     let str = '';
+//     for (let i = 0; i < arr.length; i++) {
+//         if (i === arr.length - 1)
+//             connector = '';
+//         str += arr[i] + connector;
+//     }
+//     console.log(str);
+// }
+// glue(list, '~')
+
+//造一个函数sum，可以将传入的数组求和
+
+let list = [1, 2, 3, 4, 5];
+
+// function sum(arr) {
+//     let result = 0;
+//     for (let i = 0; i < arr.length; i++) {
+//         result += arr[i];
+//     }
+//     console.log(result);
+// }
+// sum(list);
+function sum(arr) {
+    let result = 0;
+
+    for (let i = 0; i < arr.length; i++) {
+        result += arr[i];
+    }
+    return result;
+}
+console.log(sum(list));
 
 
 // let list = ['a1', 'a2', ['b1', 'b2', ['c1', 'c2', 'c3'], 'b3'], 'a3'];
