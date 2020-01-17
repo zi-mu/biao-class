@@ -582,3 +582,63 @@ function eachNumber(arr, fn) {
 //     console.log(num)
 // }
 // min([0, -1, 2, 3])
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~+++++++++++++++++++++
+//造一个基础函数eachStr()，可以传入字符串组成的数组和一个回调函数
+
+function eachStr(arr, fn) {
+    for (let i = 0; i < arr.length; i++) {
+        fn(arr[i]);
+    }
+}
+
+// function getYo(arr) {
+//     let result = [];
+//     eachStr(arr, it => {
+//         if (!it.includes('yo'))
+//             return;
+//         result.push(it);
+//     })
+//     console.log(result);
+// }
+// getYo(['a', 'yo', 'yoo'])
+
+// function getYo(arr) {
+//     let result = [];
+//     eachStr(arr, it => {
+//         if (it.includes('yo'))
+//             result.push(it);
+//     });
+//     console.log(result);
+// }
+// getYo(['aa,', 'bb', 'yo', 'yoo'])
+
+// function getYo(arr) {
+//     let result = [];
+//     eachStr(arr, it => {
+//         if (it.includes('yo'))
+//             result.push(it);
+//     });
+//     console.log(result);
+// }
+// getYo(['a', 'yo', 'haha']);
+// function getYo(arr) {
+//     let result = [];
+//     eachStr(arr, (it) => {
+//         if (it.includes('yo'))
+//             result.push(it);
+//     });
+//     return result;
+// }
+// console.log(getYo(['a,', 'b', 'yo']))
+//++++++++++++++++++++++++++++++++++++++++
+
+// function shortStr(arr) {
+//     let result = [];
+//     eachStr(arr, it => {
+//         if (it.length === 1)
+//             result.push(it);
+//     });
+//     console.log(result);
+// }
+// shortStr(['a', 'foo', 'b', 'bar'])
