@@ -140,6 +140,445 @@
 //     return myguest + fr;
 // }, function () {
 //     let myguest = '不吃辣椒';
-//     let fr = '不吃香菜';
+//     let fr = '不吃香菜';\
 //     return [myguest, fr];
 // })
+
+// document.addEventListener('click', () => {
+//     console.log('yo');
+// })
+// setInterval(() => {
+//     console.log('yo')
+// }, 1000);
+// setInterval(() => {
+//     console.log('hah');
+// }, 1000);
+// setTimeout(() => {
+//     console.log('wowo.....')
+// }, 5000);
+
+
+// 造一个基础函数eachNumber()，可以传入数字组成的数组和一个回调函数
+// 基于此函数造出：
+
+// evenNumber()，evenNumber([1, 2, 3, 4]) // [2, 4]
+// oddNumber()，oddNumber([1, 2, 3, 4]) // [1, 3]
+// sum()，sum([1, 2]) // 3
+// max()，max([1, 2, 3, 4]) // 4
+// min()，min([1, 2, 3, 4]) // 1
+
+
+// function eachNumber(arr, fn) {
+//     for (let i = 0; i < arr.length; i++) {
+//         fn(arr[i]);
+//     }
+// }
+
+// function evenNumber(list) {
+//     let result = [];
+//     eachNumber(list, function (item) {
+//         if (item % 2)
+//             return;
+//         result.push(item);
+//     })
+//     return result;
+// }
+// console.log(evenNumber([1, 2, 4, 6, 4, 7, 8, 9, 10]));
+
+// function eachNumber(arr, fn) {
+//     for (let i = 0; i < arr.length; i++) {
+//         fn(arr[i]);
+//     }
+// }
+
+// function evenNumber(arr) {
+//     let result = [];
+//     eachNumber(arr, function (it) {
+//         if (it % 2)
+//             return;
+//         result.push(it);
+//     })
+//     return result;
+// }
+// console.log(evenNumber([1, 2, 3, 4, 5, 6, 7, 8]))
+
+// function eachNumber(arr, fn) {
+//     for (let i = 0; i < arr.length; i++) {
+//         let it = arr[i];
+//         fn(it);
+//     }
+// }
+
+// function evenNumber(arr) {
+//     let result = [];
+//     eachNumber(arr, function (it) {
+//         if (it % 2)
+//             return;
+//         result.push(it);
+//     })
+//     console.log(result);
+// }
+// evenNumber([2, 3, 4]);
+
+// function eachNumber(arr, fn) {
+//     for (let i = 0; i < arr.length; i++) {
+//         fn(arr[i]);
+//     }
+// }
+
+// function evenNumber(arr) {
+//     let result = [];
+//     eachNumber(arr, function (it) {
+//         if (it % 2)
+//             return;
+//         result.push(it);
+//     })
+//     console.log(result);
+// }
+// evenNumber([22, 3, 45, 3, 67, 8]);
+
+// function eachNumber(arr, fn) {
+//     for (let i = 0; i < arr.length; i++) {
+//         fn(arr[i]);
+//     }
+// }
+
+// function evenNumber(arr) {
+//     let result = [];
+//     eachNumber(arr, function (it) {
+//         if (it % 2)
+//             return;
+//         result.push(it);
+//     })
+//     return result;
+// }
+// console.log(evenNumber([2, 3, 4, 5, 6, ]))
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// function eachNumber(arr, fn) {
+//     for (let i = 0; i < arr.length; i++) {
+//         fn(arr[i]);
+//     }
+// }
+
+// function oddNumber(arr) {
+//     let result = [];
+//     eachNumber(arr, function (it) {
+//         if (!(it % 2))
+//             return;
+//         result.push(it);
+
+//     })
+//     return result;
+// }
+// console.log(oddNumber([1, 2, 3, 4, 5]));
+
+// function eachNumber(arr, fn) {
+//     for (let i = 0; i < arr.length; i++) {
+//         fn(arr[i]);
+//     }
+// }
+
+// function oddNumber(arr) {
+//     let list = [];
+//     eachNumber(arr, function (it) {
+//         if (it % 2)
+//             list.push(it);
+//     })
+//     console.log(list);
+// }
+
+// oddNumber([2, 1, 2, 43, , 4, 3])
+
+// function eachNumber(arr, fn) {
+//     for (let i = 0; i < arr.length; i++) {
+//         fn(arr[i]);
+//     }
+// }
+
+// function oddNumber(list) {
+//     let result = [];
+//     eachNumber(list, function (item) {
+//         if (!(item % 2))
+//             return
+//         result.push(item);
+
+//     })
+//     console.log(result);
+// }
+// oddNumber([3, 3, 3, 2, 23, 34, ]);
+
+// function eachNumber(arr, fn) {
+//     for (let i = 0; i < arr.length; i++) {
+//         fn(arr[i]);
+//     }
+// }
+
+// function oddNumber(arr) {
+//     let result = [];
+//     eachNumber(arr, function (it) {
+//         if (!(it % 2))
+//             return;
+//         result.push(it);
+//     })
+//     console.log(result);
+// }
+// oddNumber([3, 4, 5, 7])
+
+// function eachNumber(arr, fn) {
+//     for (let i = 0; i < arr.length; i++) {
+//         fn(arr[i]);
+//     }
+// }
+
+// function oddNumber(arr) {
+//     let result = [];
+//     eachNumber(arr, function (it) {
+//         if (it % 2)
+//             result.push(it);
+//     })
+//     console.log(result);
+// }
+// oddNumber([3, 6, 9, 3, 5, 4])
+//
+
+//===============================================
+// function eachNumber(arr, fn) {
+//     for (let i = 0; i < arr.length; i++) {
+//         fn(arr[i]);
+//     }
+// }
+
+// function sum(arr) {
+//     let sum = 0;
+//     eachNumber(arr, function (it) {
+//         sum += it;
+//     })
+//     console.log(sum)
+// }
+// sum([1, 2, 3, 4, 5])
+
+// function eachNumber(arr, fn) {
+//     for (let i = 0; i < arr.length; i++) {
+//         fn(arr[i]);
+//     }
+// }
+
+// function sum(arr) {
+//     let sum = 0;
+//     eachNumber(arr, function (it) {
+//         sum += it;
+//     })
+//     console.log(sum);
+// }
+// sum([3, 4, 5, 6]);
+
+// function eachNumber(arr, fn) {
+//     for (let i = 0; i < arr.length; i++) {
+//         fn(arr[i]);
+//     }
+// }
+
+// function sum(arr) {
+//     let sum = 0;
+//     eachNumber(arr, function (it) {
+//         sum += it;
+//     })
+//     return sum;
+// }
+// console.log(sum([2, 3, 5]))
+
+// function eachNumber(arr, fn) {
+//     for (let i = 0; i < arr.length; i++) {
+//         fn(arr[i]);
+//     }
+// }
+
+// function sum(arr) {
+//     let sum = 0;
+//     eachNumber(arr, it => sum += it);
+//     return sum;
+// }
+// console.log(sum([3, 4, 5]))
+
+// function eachNumber(arr, fn) {
+//     for (let i = 0; i < arr.length; i++) {
+//         fn(arr[i]);
+//     }
+// }
+
+// function sum(arr) {
+//     let sum = 0;
+//     eachNumber(arr, it => sum += it);
+//     return sum;
+// }
+// console.log(sum([1, 2, 3, 4]))
+
+//================================ max()
+
+// function eachNumber(arr, fn) {
+//     for (let i = 0; i < arr.length; i++) {
+//         fn(arr[i])
+//     }
+// }
+
+// function max(arr) {
+//     let num;
+//     eachNumber(arr, function (it) {
+//         if (num === undefined) {
+//             num = it;
+//             return;
+//         }
+//         if (it > num)
+//             num = it;
+
+//     })
+//     return num;
+// }
+// console.log(max([3, 4, -2]));
+
+// function eachNumber(arr, fn) {
+//     for (let i = 0; i < arr.length; i++) {
+//         fn(arr[i]);
+//     }
+// }
+
+// function max(arr) {
+//     let num;
+//     eachNumber(arr, it => {
+//         if (num === undefined) {
+//             num = it;
+//             return;
+//         }
+//         if (it > num)
+//             num = it;
+
+//     })
+//     return num;
+// }
+// console.log(max([2, 4, 3, 5, 6]));
+
+// function eachNumber(arr, fn) {
+//     for (let i = 0; i < arr.length; i++) {
+//         fn(arr[i]);
+//     }
+// }
+
+// function max(arr) {
+//     let num;
+//     eachNumber(arr, it => {
+//         if (num === undefined) {
+//             num = it;
+//             return;
+//         }
+//         if (it > num)
+//             num = it;
+//     })
+//     return num;
+// }
+// console.log(max([2, 3, 1, 3]));
+
+// function eachNumber(arr, fn) {
+//     for (let i = 0; i < arr.length; i++) {
+//         fn(arr[i]);
+//     }
+// }
+
+// function max(arr) {
+//     let num;
+//     eachNumber(arr, it => {
+//         if (num === undefined) {
+//             num = it;
+//             return;
+//         }
+//         if (it > num)
+//             num = it;
+//     });
+//     return num;
+// }
+// console.log(max([1, 2, 3, 4]))
+
+//======================================
+// function eachNumber(arr, fn) {
+//     for (let i = 0; i < arr.length; i++) {
+//         fn(arr[i]);
+//     }
+// }
+
+// function min(arr) {
+//     let num;
+//     eachNumber(arr, it => {
+//         if (num === undefined) {
+//             num = it;
+//             return;
+//         }
+//         if (it < num)
+//             num = it;
+//     });
+//     return num;
+// }
+// console.log(min([1, 2, 4, -1]))
+
+function eachNumber(arr, fn) {
+    for (let i = 0; i < arr.length; i++) {
+        fn(arr[i]);
+    }
+}
+
+// function min(arr) {
+//     let num;
+//     eachNumber(arr, it => {
+//         if (num === undefined) {
+//             num = it;
+//             return;
+//         }
+//         if (it < num)
+//             num = it;
+//     });
+//     console.log(num);
+// }
+
+// min([1, 2, 3, 4, 5])
+// function min(arr) {
+//     let num;
+//     eachNumber(arr, it => {
+//         if (num === undefined) {
+//             num = it;
+//             return;
+//         }
+//         if (it < num)
+//             num = it;
+//     });
+//     console.log(num);
+// }
+// min([1, 2, 3, 4])
+
+// function min(arr) {
+//     let num;
+//     eachNumber(arr, it => {
+
+//         if (num === undefined) {
+//             num = it;
+//             return;
+//         }
+//         if (it < num)
+//             num = it;
+//     });
+
+//     console.log(num);
+// }
+// min([1, 2, 3])
+
+// function min(arr) {
+//     let num;
+//     eachNumber(arr, it => {
+//         if (num === undefined) {
+//             num = it;
+//             return;
+//         }
+//         if (it < num)
+//             num = it;
+//     });
+//     console.log(num)
+// }
+// min([0, -1, 2, 3])
