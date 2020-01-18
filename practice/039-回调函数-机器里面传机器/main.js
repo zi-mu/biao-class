@@ -586,12 +586,12 @@ function eachNumber(arr, fn) {
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~+++++++++++++++++++++
 //造一个基础函数eachStr()，可以传入字符串组成的数组和一个回调函数
 
-function eachStr(arr, fn) {
-    for (let i = 0; i < arr.length; i++) {
-        fn(arr[i]);
-    }
-}
+// function eachStr(arr, fn) {
+//     for (let i = 0; i < arr.length; i++) {
+//         fn(arr[i]);
+//     }
 
+// }
 // function getYo(arr) {
 //     let result = [];
 //     eachStr(arr, it => {
@@ -642,3 +642,191 @@ function eachStr(arr, fn) {
 //     console.log(result);
 // }
 // shortStr(['a', 'foo', 'b', 'bar'])
+// function shortStr(arr) {
+//     let result = [];
+//     eachStr(arr, it => {
+//         if (it.length === 1)
+//             result.push(it);
+//     });
+//     console.log(result);
+// }
+// shortStr(['a', 'b', 'aa', 'cc'])
+
+// function shortStr(arr) {
+//     let result = [];
+//     eachStr(arr, (it) => {
+//         if (it.length === 1)
+//             result.push(it)
+//     });
+//     console.log(result);
+// }
+// shortStr(['a', 'bb', 'c'])
+// function shortStr(arr) {
+//     let result = [];
+//     eachStr(arr, it => {
+//         if (it.length === 1)
+//             result.push(it);
+//     });
+//     console.log(result)
+// }
+// shortStr(['ac', 'c', 'b'])
+
+// function shortStr(arr) {
+//     let result = [];
+//     eachStr(arr, it => {
+//         if (it.length === 1)
+//             result.push(it);
+//     });
+//     console.log(result);
+// }
+// shortStr(['a', 'bb', 'c'])
+
+// function shortStr(arr) {
+//     let result = [];
+//     eachStr(arr, it => {
+//         if (it.length === 1)
+//             result.push(it);
+//     });
+//     console.log(result);
+// }
+// shortStr(['a', 'bb', 'c'])
+// function shortStr(arr) {
+//     let result = [];
+
+//     eachStr(arr, it => {
+//         if (it.length === 1)
+//             result.push(it);
+//     })
+//     console.log(result);
+// }
+// shortStr(['al', 'ca', 'ca', 'a', 'c', 'b'])
+
+// function eachStr(arr, fn) {
+//     for (let i = 0; i < arr.length; i++) {
+//         fn(arr[i]);
+//     }
+// }
+
+// function join(arr) {
+//     let str = '';
+//     eachStr(arr, it => str += it)
+//     console.log(str);
+// }
+// join(['Y', 'o', 'a', 'ha'])
+
+// function join(arr) {
+//     let str = '';
+//     eachStr(arr, it => {
+//         str += it;
+//     })
+//     return str;
+// }
+// console.log(join(['K', 'a', 'c', ' b']))
+
+// function join(arr) {
+//     let result = '';
+//     eachStr(arr, it => {
+//         result += it;
+//     })
+//     return result;
+// }
+// console.log(join(['a', 'c', 'o']))
+
+// function join(arr) {
+//     let result = '';
+//     eachStr(arr, it => result += it);
+//     return result;
+// }
+// console.log(join(['m', 'a', 'c']))
+
+// function join(arr) {
+//     let str = '';
+//     eachStr(arr, it => str += it);
+//     return str;
+// }
+// console.log(join(['a', 'k', '47']))
+
+function eachStr(arr, fn) {
+    for (let i = 0; i < arr.length; i++) {
+        fn(arr[i]);
+    }
+}
+
+// function search(arr, keyword) {
+//     let result = [];
+//     eachStr(arr, it => {
+//         if (it.includes(keyword))
+//             result.push(it);
+//     })
+//     return result;
+// }
+// console.log(search(['张三丰', '张君宝', '杨过'], '张'))
+
+// function search(arr, keyword) {
+//     let result = [];
+//     eachStr(arr, it => {
+//         if (it.includes(keyword))
+//             result.push(it)
+//     })
+//     return result;
+// }
+// console.log(search(['a,', 'cc', 'bb', 'ab'], 'a'))
+
+// function search(arr, word) {
+//     let result = [];
+//     eachStr(arr, it => {
+//         if (it.includes(word))
+//             result.push(it)
+//     })
+//     console.log(result);
+// }
+// search(['子木', '子'], '子')
+
+// function search(arr, keyword) {
+//     let result = [];
+//     eachStr(arr, it => {
+//         if (it.includes(keyword))
+//             result.push(it);
+//     })
+//     return result;
+// }
+// console.log(search(['b,', 'c'], 'haha'))
+
+// function exclude(arr, keyword) {
+//     let result = [];
+//     eachStr(arr, it => {
+//         if (!it.includes(keyword))
+//             result.push(it);
+//     })
+//     console.log(result);
+// }
+// exclude(['a', 'ab', 'c'], 'a')
+// function exclude(arr, keyword) {
+//     let result = [];
+//     eachStr(arr, it => {
+//         if (!it.includes(keyword))
+//             result.push(it)
+//     })
+//     console.log(result);
+// }
+// exclude(['c', 'ab', 'ak', 'a'], 'a')
+
+// function search(arr, keyword) {
+//     let result = [];
+//     eachStr(arr, it => {
+//         if (!it.includes(keyword))
+//             result.push(it)
+//     })
+//     console.log(result)
+// }
+// search(['a', 'b', 'c'], 'c');
+
+// function search(arr, keywrod) {
+//     let result = [];
+//     eachStr(arr, it => {
+//         if (!it.includes(keywrod))
+//             result.push(it);
+//     })
+//     return result;
+// }
+// console.log(search(['ac', 'a', 'b'], 'a'))
