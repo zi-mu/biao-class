@@ -5,44 +5,111 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./main.css">
+    <script src="./main.js"></script>
     <title>Document</title>
     <style>
-        :root {
-            font-family: sans-serif;
+        /* :root {
             font-size: 15px;
+            font-family: sans-serif;
         }
 
-        .container {
-            opacity: 1;
+        .board {
             display: inline-block;
-            background-color: black;
-            /* padding: 50px; */
-            /* border: 3px solid red; */
-        }
-
-        .inner {
-            display: inline-block;
-            padding: 20px 50px;
-            border: 5px solid red;
-            font-size: 3rem;
             color: red;
+            background: #000;
+            font-size: 2rem;
+            padding: 10px;
             opacity: 1;
         }
 
-        .people {
-            font-size: 1.5rem;
-            padding-left: 20px;
+        [hidden] {
+            display: none !important;
+        } */
 
+        :root {
+            font-size: 15px;
+            font-family: sans-serif;
+        }
+
+        .board {
+            font-size: 2rem;
+            background: #000;
+            color: red;
+            display: inline-block;
+            padding: 10px;
+            line-height: 1;
+        }
+
+        [hidden] {
+            display: none;
         }
     </style>
 </head>
 
 <body>
-    <script src="main.js"></script>
-</body>
-<div class="container">
-    <span class="inner">修脚 贴膜 </span>
+    <!-- <div class="board">
+        <span class="inner">修脚 贴膜</span> -->
 
-</div>
+    <div class="board">
+        <span class="inner">修脚 贴膜</span>
+    </div>
+    </div>
+</body>
+
+<script>
+    const board = document.querySelector('.board');
+    const inner = board.querySelector('.inner')
+
+    setInterval(() => {
+        // if (board.innerText)
+        //     board.innerText = ''
+        // else
+        //     board.innerText = '修脚 贴膜'
+        // board.hidden = !board.hidden;
+        // let visible = getComputedStyle(inner).opacity === '1';
+        // let visible = inner.style.opacity === '1'
+    //     visible ? inner.style.opacity = 0 : inner.style.opacity = 1;
+    // }, 800);
+    // setInterval(() => {
+    //     //1.
+    //     // if (board.innerText)
+    //     //     board.innerText = '';
+    //     // else
+    //     //     board.innerText = '修脚 贴膜'
+
+    //     //2.
+    //     // board.hidden = !board.hidden;
+    //     //3.
+    //     let visible = getComputedStyle(inner).opacity === '1';
+    //     if (visible)
+    //         inner.style.opacity = 0;
+    //     else
+    //         inner.style.opacity = 1;
+
+    // }, 800);
+    // const board = document.querySelector('.board');
+    // const inner = board.querySelector('.inner')
+    // setInterval(function () {
+
+    //     //1.
+    //     // if (board.innerText)
+    //     //     board.innerText = '';
+    //     // else
+    //     //     board.innerText = '修脚 贴膜'
+    //     //2.
+    //     // board.hidden = !board.hidden;
+
+    //     //3.
+    //     // let visible = getComputedStyle(inner).opacity == '1';
+    //     // if (visible)
+    //     //     inner.style.opacity = 0;
+    //     // else
+    //     //     inner.style.opacity = 1;
+
+    // }, 800)
+
+
+</script>
 
 </html>
