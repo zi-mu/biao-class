@@ -1,7 +1,8 @@
-/* :root {
+:root {
     font-size: 15px;
     font-family: sans-serif;
 }
+
 
 .board {
     display: inline-block;
@@ -11,8 +12,13 @@
     padding: 20px 50px;
     line-height: 1;
     opacity: 1;
+    border: 5px solid;
+}
+
+.counter {
+    font-size: 1rem;
 }
 
 [hidden] {
     display: none !important;
-} */
+}
