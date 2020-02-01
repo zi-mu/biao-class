@@ -1,0 +1,138 @@
+<!-- 使用HTML的on属性绑定 -->
+<!-- on事件名=‘函数()’ -->
+
+<!-- <h2 onclick="(function(){
+    let h = document.querySelector('h2');
+    h.innerText = 'i am two';
+})()">i am a title</h2>
+<p onclick="(function(){console.log(1)})()">a</p>
+
+<p onclick='(()=>{
+    console.log(1)
+    })()'>b</p>
+
+<p onclick="console.log('ha')"">hah</p> -->
+
+
+
+<!-- 使用DOM的on属性绑定 -->
+<!-- <p id='a'>Yo</p>
+<script>
+    a.onclick = function () {
+        console.log('yo');
+    }
+</script> -->
+
+
+<!-- 使用addEventListener绑定 -->
+<!-- <p id='a'>yo</p>
+
+<script>
+    let p = document.querySelector('#a');
+    p.addEventListener('click', () => {
+        console.log('yomuhaha');
+    })
+    p.addEventListener('click', function () {
+        console.log('hello world')
+    })
+</script> -->
+<!-- <style>
+    div {
+        background: rgba(0, 0, 0, .1);
+        padding: 20px;
+        max-width: 500px;
+    }
+</style>
+<div class="a">a
+    <div class="b">
+        b
+        <div class="c">
+            c
+        </div>
+    </div>
+</div>
+<script>
+    let a = document.querySelector('.a');
+    let b = document.querySelector('.b');
+    let c = document.querySelector('.c');
+
+    a.addEventListener('click', (e) => {
+        console.log(e.currentTarget)
+        console.log('A');
+    })
+    b.addEventListener('click', (e) => {
+        console.log(e.currentTarget);
+        console.log('B');
+    })
+    c.addEventListener('click', (e) => {
+        console.log(e.currentTarget);
+        console.log('C');
+    })
+</script> -->
+
+<style>
+    .toggle {
+        display: block;
+
+    }
+
+    .dropdown {
+        display: inline-block;
+        background: #666;
+        color: #fff;
+        padding: 10px;
+    }
+
+    [hidden] {
+        display: none !important;
+    }
+
+    .dropdown a {
+        min-width: 100px;
+        display: block;
+        padding: 20px;
+        color: inherit;
+        text-decoration: none;
+    }
+</style>
+
+<button class="toggle">更多</button>
+<div class="dropdown" hidden>
+    <a href="#">A</a>
+    <a href="#">B</a>
+    <a href="#">C</a>
+</div>
+
+<script>
+    const dropdown = document.querySelector('.dropdown');
+    const toggle = document.querySelector('.toggle');
+
+
+    // document.body.addEventListener('click', (e) => {
+    //     // let classList = e.target.classList;
+
+    //     // if (classList.contains('toggle')) {
+    //     let target = e.target;
+    //     if (target === toggle) {
+    //         dropdown.hidden = !dropdown.hidden;
+    //         return;
+    //     }
+
+    //     if (!target.closest('.dropdown'))
+    //         dropdown.hidden = true;
+    // })
+
+    document.body.addEventListener('click', (e) => {
+
+        let target = e.target;
+        if (target === toggle) {
+            dropdown.hidden = !dropdown.hidden;
+            return;
+        }
+        if (!target.closest('.dropdown')) {
+            dropdown.hidden = true;
+        }
+
+    })
+
+</script>
