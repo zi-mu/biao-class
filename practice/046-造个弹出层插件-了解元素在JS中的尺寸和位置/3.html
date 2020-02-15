@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .yo-popup {
+            background: #fff;
+            border: 5px solid;
+            padding: 20px;
+            position: fixed;
+            z-index: 1000;
+
+        }
+
+        .yo-mask {
+            background: rgba(0, 0, 0, .5);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <button class="trigger">收藏</button>
+    <!-- <div class="popup">
+        确定收藏吗?
+    </div> -->
+    <div>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam, nemo tempora, doloremque atque sunt quasi
+        natus ipsum accusamus at, tempore aliquam expedita necessitatibus molestias alias cupiditate deleniti excepturi
+        corporis cum?
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam, nemo tempora, doloremque atque sunt quasi
+        natus ipsum accusamus at, tempore aliquam expedita necessitatibus molestias alias cupiditate deleniti excepturi
+        corporis cum?
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam, nemo tempora, doloremque atque sunt quasi
+        natus ipsum accusamus at, tempore aliquam expedita necessitatibus molestias alias cupiditate deleniti excepturi
+        corporis cum?
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam, nemo tempora, doloremque atque sunt quasi
+        natus ipsum accusamus at, tempore aliquam expedita necessitatibus molestias alias cupiditate deleniti excepturi
+        corporis cum?
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam, nemo tempora, doloremque atque sunt quasi
+        natus ipsum accusamus at, tempore aliquam expedita necessitatibus molestias alias cupiditate deleniti excepturi
+        corporis cum?
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam, nemo tempora, doloremque atque sunt quasi
+        natus ipsum accusamus at, tempore aliquam expedita necessitatibus molestias alias cupiditate deleniti excepturi
+        corporis cum?
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam, nemo tempora, doloremque atque sunt quasi
+        natus ipsum accusamus at, tempore aliquam expedita necessitatibus molestias alias cupiditate deleniti excepturi
+        corporis cum?
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam, nemo tempora, doloremque atque sunt quasi
+        natus ipsum accusamus at, tempore aliquam expedita necessitatibus molestias alias cupiditate deleniti excepturi
+        corporis cum?
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam, nemo tempora, doloremque atque sunt quasi
+        natus ipsum accusamus at, tempore aliquam expedita necessitatibus molestias alias cupiditate deleniti excepturi
+        corporis cum?
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam, nemo tempora, doloremque atque sunt quasi
+        natus ipsum accusamus at, tempore aliquam expedita necessitatibus molestias alias cupiditate deleniti excepturi
+        corporis cum?
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam, nemo tempora, doloremque atque sunt quasi
+        natus ipsum accusamus at, tempore aliquam expedita necessitatibus molestias alias cupiditate deleniti excepturi
+        corporis cum?
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam, nemo tempora, doloremque atque sunt quasi
+        natus ipsum accusamus at, tempore aliquam expedita necessitatibus molestias alias cupiditate deleniti excepturi
+        corporis cum?
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam, nemo tempora, doloremque atque sunt quasi
+        natus ipsum accusamus at, tempore aliquam expedita necessitatibus molestias alias cupiditate deleniti excepturi
+        corporis cum?
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam, nemo tempora, doloremque atque sunt quasi
+        natus ipsum accusamus at, tempore aliquam expedita necessitatibus molestias alias cupiditate deleniti excepturi
+        corporis cum?
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam, nemo tempora, doloremque atque sunt quasi
+        natus ipsum accusamus at, tempore aliquam expedita necessitatibus molestias alias cupiditate deleniti excepturi
+        corporis cum?
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam, nemo tempora, doloremque atque sunt quasi
+        natus ipsum accusamus at, tempore aliquam expedita necessitatibus molestias alias cupiditate deleniti excepturi
+        corporis cum?
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam, nemo tempora, doloremque atque sunt quasi
+        natus ipsum accusamus at, tempore aliquam expedita necessitatibus molestias alias cupiditate deleniti excepturi
+        corporis cum?
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam, nemo tempora, doloremque atque sunt quasi
+        natus ipsum accusamus at, tempore aliquam expedita necessitatibus molestias alias cupiditate deleniti excepturi
+        corporis cum?
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam, nemo tempora, doloremque atque sunt quasi
+        natus ipsum accusamus at, tempore aliquam expedita necessitatibus molestias alias cupiditate deleniti excepturi
+        corporis cum?
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam, nemo tempora, doloremque atque sunt quasi
+        natus ipsum accusamus at, tempore aliquam expedita necessitatibus molestias alias cupiditate deleniti excepturi
+        corporis cum?
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam, nemo tempora, doloremque atque sunt quasi
+        natus ipsum accusamus at, tempore aliquam expedita necessitatibus molestias alias cupiditate deleniti excepturi
+        corporis cum?
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam, nemo tempora, doloremque atque sunt quasi
+        natus ipsum accusamus at, tempore aliquam expedita necessitatibus molestias alias cupiditate deleniti excepturi
+        corporis cum?
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam, nemo tempora, doloremque atque sunt quasi
+        natus ipsum accusamus at, tempore aliquam expedita necessitatibus molestias alias cupiditate deleniti excepturi
+        corporis cum?
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam, nemo tempora, doloremque atque sunt quasi
+        natus ipsum accusamus at, tempore aliquam expedita necessitatibus molestias alias cupiditate deleniti excepturi
+        corporis cum?
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam, nemo tempora, doloremque atque sunt quasi
+        natus ipsum accusamus at, tempore aliquam expedita necessitatibus molestias alias cupiditate deleniti excepturi
+        corporis cum?
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam, nemo tempora, doloremque atque sunt quasi
+        natus ipsum accusamus at, tempore aliquam expedita necessitatibus molestias alias cupiditate deleniti excepturi
+        corporis cum?
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam, nemo tempora, doloremque atque sunt quasi
+        natus ipsum accusamus at, tempore aliquam expedita necessitatibus molestias alias cupiditate deleniti excepturi
+        corporis cum?
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam, nemo tempora, doloremque atque sunt quasi
+        natus ipsum accusamus at, tempore aliquam expedita necessitatibus molestias alias cupiditate deleniti excepturi
+        corporis cum?
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam, nemo tempora, doloremque atque sunt quasi
+        natus ipsum accusamus at, tempore aliquam expedita necessitatibus molestias alias cupiditate deleniti excepturi
+        corporis cum?
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam, nemo tempora, doloremque atque sunt quasi
+        natus ipsum accusamus at, tempore aliquam expedita necessitatibus molestias alias cupiditate deleniti excepturi
+        corporis cum?
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam, nemo tempora, doloremque atque sunt quasi
+        natus ipsum accusamus at, tempore aliquam expedita necessitatibus molestias alias cupiditate deleniti excepturi
+        corporis cum?
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam, nemo tempora, doloremque atque sunt quasi
+        natus ipsum accusamus at, tempore aliquam expedita necessitatibus molestias alias cupiditate deleniti excepturi
+        corporis cum?
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam, nemo tempora, doloremque atque sunt quasi
+        natus ipsum accusamus at, tempore aliquam expedita necessitatibus molestias alias cupiditate deleniti excepturi
+        corporis cum?
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam, nemo tempora, doloremque atque sunt quasi
+        natus ipsum accusamus at, tempore aliquam expedita necessitatibus molestias alias cupiditate deleniti excepturi
+        corporis cum?
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam, nemo tempora, doloremque atque sunt quasi
+        natus ipsum accusamus at, tempore aliquam expedita necessitatibus molestias alias cupiditate deleniti excepturi
+        corporis cum?
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam, nemo tempora, doloremque atque sunt quasi
+        natus ipsum accusamus at, tempore aliquam expedita necessitatibus molestias alias cupiditate deleniti excepturi
+        corporis cum?
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam, nemo tempora, doloremque atque sunt quasi
+        natus ipsum accusamus at, tempore aliquam expedita necessitatibus molestias alias cupiditate deleniti excepturi
+        corporis cum?
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam, nemo tempora, doloremque atque sunt quasi
+        natus ipsum accusamus at, tempore aliquam expedita necessitatibus molestias alias cupiditate deleniti excepturi
+        corporis cum?
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam, nemo tempora, doloremque atque sunt quasi
+        natus ipsum accusamus at, tempore aliquam expedita necessitatibus molestias alias cupiditate deleniti excepturi
+        corporis cum?
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam, nemo tempora, doloremque atque sunt quasi
+        natus ipsum accusamus at, tempore aliquam expedita necessitatibus molestias alias cupiditate deleniti excepturi
+        corporis cum?
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam, nemo tempora, doloremque atque sunt quasi
+        natus ipsum accusamus at, tempore aliquam expedita necessitatibus molestias alias cupiditate deleniti excepturi
+        corporis cum?
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam, nemo tempora, doloremque atque sunt quasi
+        natus ipsum accusamus at, tempore aliquam expedita necessitatibus molestias alias cupiditate deleniti excepturi
+        corporis cum?
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam, nemo tempora, doloremque atque sunt quasi
+        natus ipsum accusamus at, tempore aliquam expedita necessitatibus molestias alias cupiditate deleniti excepturi
+        corporis cum?
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam, nemo tempora, doloremque atque sunt quasi
+        natus ipsum accusamus at, tempore aliquam expedita necessitatibus molestias alias cupiditate deleniti excepturi
+        corporis cum?
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam, nemo tempora, doloremque atque sunt quasi
+        natus ipsum accusamus at, tempore aliquam expedita necessitatibus molestias alias cupiditate deleniti excepturi
+        corporis cum?
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam, nemo tempora, doloremque atque sunt quasi
+        natus ipsum accusamus at, tempore aliquam expedita necessitatibus molestias alias cupiditate deleniti excepturi
+        corporis cum?
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam, nemo tempora, doloremque atque sunt quasi
+        natus ipsum accusamus at, tempore aliquam expedita necessitatibus molestias alias cupiditate deleniti excepturi
+        corporis cum?
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam, nemo tempora, doloremque atque sunt quasi
+        natus ipsum accusamus at, tempore aliquam expedita necessitatibus molestias alias cupiditate deleniti excepturi
+        corporis cum?
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam, nemo tempora, doloremque atque sunt quasi
+        natus ipsum accusamus at, tempore aliquam expedita necessitatibus molestias alias cupiditate deleniti excepturi
+        corporis cum?
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam, nemo tempora, doloremque atque sunt quasi
+        natus ipsum accusamus at, tempore aliquam expedita necessitatibus molestias alias cupiditate deleniti excepturi
+        corporis cum?
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam, nemo tempora, doloremque atque sunt quasi
+        natus ipsum accusamus at, tempore aliquam expedita necessitatibus molestias alias cupiditate deleniti excepturi
+        corporis cum?
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam, nemo tempora, doloremque atque sunt quasi
+        natus ipsum accusamus at, tempore aliquam expedita necessitatibus molestias alias cupiditate deleniti excepturi
+        corporis cum?
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam, nemo tempora, doloremque atque sunt quasi
+        natus ipsum accusamus at, tempore aliquam expedita necessitatibus molestias alias cupiditate deleniti excepturi
+        corporis cum?
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam, nemo tempora, doloremque atque sunt quasi
+        natus ipsum accusamus at, tempore aliquam expedita necessitatibus molestias alias cupiditate deleniti excepturi
+        corporis cum?
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam, nemo tempora, doloremque atque sunt quasi
+        natus ipsum accusamus at, tempore aliquam expedita necessitatibus molestias alias cupiditate deleniti excepturi
+        corporis cum?
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam, nemo tempora, doloremque atque sunt quasi
+        natus ipsum accusamus at, tempore aliquam expedita necessitatibus molestias alias cupiditate deleniti excepturi
+        corporis cum?
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam, nemo tempora, doloremque atque sunt quasi
+        natus ipsum accusamus at, tempore aliquam expedita necessitatibus molestias alias cupiditate deleniti excepturi
+        corporis cum?
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam, nemo tempora, doloremque atque sunt quasi
+        natus ipsum accusamus at, tempore aliquam expedita necessitatibus molestias alias cupiditate deleniti excepturi
+        corporis cum?
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam, nemo tempora, doloremque atque sunt quasi
+        natus ipsum accusamus at, tempore aliquam expedita necessitatibus molestias alias cupiditate deleniti excepturi
+        corporis cum?
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam, nemo tempora, doloremque atque sunt quasi
+        natus ipsum accusamus at, tempore aliquam expedita necessitatibus molestias alias cupiditate deleniti excepturi
+        corporis cum?
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam, nemo tempora, doloremque atque sunt quasi
+        natus ipsum accusamus at, tempore aliquam expedita necessitatibus molestias alias cupiditate deleniti excepturi
+        corporis cum?
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam, nemo tempora, doloremque atque sunt quasi
+        natus ipsum accusamus at, tempore aliquam expedita necessitatibus molestias alias cupiditate deleniti excepturi
+        corporis cum?
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam, nemo tempora, doloremque atque sunt quasi
+        natus ipsum accusamus at, tempore aliquam expedita necessitatibus molestias alias cupiditate deleniti excepturi
+        corporis cum?
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam, nemo tempora, doloremque atque sunt quasi
+        natus ipsum accusamus at, tempore aliquam expedita necessitatibus molestias alias cupiditate deleniti excepturi
+        corporis cum?
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam, nemo tempora, doloremque atque sunt quasi
+        natus ipsum accusamus at, tempore aliquam expedita necessitatibus molestias alias cupiditate deleniti excepturi
+        corporis cum?
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam, nemo tempora, doloremque atque sunt quasi
+        natus ipsum accusamus at, tempore aliquam expedita necessitatibus molestias alias cupiditate deleniti excepturi
+        corporis cum?
+    </div>
+</body>
+<script>
+    let trigger, popup, mask;
+
+    boot('.trigger');
+    function boot(triggerSelector) {
+        trigger = document.querySelector(triggerSelector);
+        initPopup();
+        initMask();
+        bindOpen();
+        bindClose();
+    }
+
+    function initPopup() {
+        popup = document.createElement('div');
+        popup.classList.add('yo-popup');
+        popup.innerText = '确定收藏?';
+        popup.hidden = true;
+
+        let divs = document.body.querySelectorAll('div');
+        let lastel = divs[divs.length - 1];
+        let parent = lastel.parentNode;
+        console.log(parent);
+        parent.insertBefore(popup, lastel);
+    }
+
+    function bindOpen() {
+        trigger.addEventListener('click', () => {
+            setVisibility(true);
+            rePosition('bottom');
+
+        })
+    }
+
+    function rePosition(position = 'center') {
+        let width = popup.offsetWidth;
+        let height = popup.offsetHeight;
+        let windowsWidth = window.innerWidth;
+        let windowsHeight = window.innerHeight;
+
+        switch (position) {
+            case 'center':
+                popup.style.left = windowsWidth / 2 - width / 2 + 'px';
+                popup.style.top = windowsWidth / 2 - height / 2 + 'px';
+                break;
+            case 'bottom':
+                popup.style.left = 0;
+                popup.style.bottom = 0;
+                break;
+            //.....
+        }
+    }
+
+    function bindClose() {
+        mask.addEventListener('click', () => {
+            setVisibility(false);
+        })
+        window.addEventListener('keyup', (e) => {
+            if (e.code == 'Escape')
+                setVisibility(false);
+        })
+    }
+
+    function setVisibility(show = 'true') {
+        mask.hidden = popup.hidden = !show;
+    }
+
+    function initMask() {
+        mask = document.createElement('div');
+        mask.classList.add('yo-mask');
+        mask.hidden = true;
+        document.body.appendChild(mask);
+    }
+</script>
+
+</html>
