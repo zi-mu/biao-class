@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*插件开始,弹出框*/
+        .yo-popup {
+            position: fixed;
+            background: #fff;
+            border: 4px solid;
+            padding: 30px;
+            z-index: 1000;
+            font-family: sans-serif;
+        }
+
+        /*遮罩*/
+        .yo-mask {
+            position: fixed;
+            background: rgba(0, 0, 0, .7);
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 999;
+        }
+    </style>
+</head>
+
+<body>
+    <button class="trigger">登录</button>
+    <div class="popup">
+        确定收藏?
+    </div>
+    <div>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut quis dolor cupiditate porro tenetur mollitia illum
+        illo, sed sapiente rerum quibusdam, ipsa asperiores, est iste sunt dolore perspiciatis voluptatum voluptatibus?
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut quis dolor cupiditate porro tenetur mollitia illum
+        illo, sed sapiente rerum quibusdam, ipsa asperiores, est iste sunt dolore perspiciatis voluptatum voluptatibus?
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut quis dolor cupiditate porro tenetur mollitia illum
+        illo, sed sapiente rerum quibusdam, ipsa asperiores, est iste sunt dolore perspiciatis voluptatum voluptatibus?
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut quis dolor cupiditate porro tenetur mollitia illum
+        illo, sed sapiente rerum quibusdam, ipsa asperiores, est iste sunt dolore perspiciatis voluptatum voluptatibus?
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut quis dolor cupiditate porro tenetur mollitia illum
+        illo, sed sapiente rerum quibusdam, ipsa asperiores, est iste sunt dolore perspiciatis voluptatum voluptatibus?
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut quis dolor cupiditate porro tenetur mollitia illum
+        illo, sed sapiente rerum quibusdam, ipsa asperiores, est iste sunt dolore perspiciatis voluptatum voluptatibus?
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut quis dolor cupiditate porro tenetur mollitia illum
+        illo, sed sapiente rerum quibusdam, ipsa asperiores, est iste sunt dolore perspiciatis voluptatum voluptatibus?
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut quis dolor cupiditate porro tenetur mollitia illum
+        illo, sed sapiente rerum quibusdam, ipsa asperiores, est iste sunt dolore perspiciatis voluptatum voluptatibus?
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut quis dolor cupiditate porro tenetur mollitia illum
+        illo, sed sapiente rerum quibusdam, ipsa asperiores, est iste sunt dolore perspiciatis voluptatum voluptatibus?
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut quis dolor cupiditate porro tenetur mollitia illum
+        illo, sed sapiente rerum quibusdam, ipsa asperiores, est iste sunt dolore perspiciatis voluptatum voluptatibus?
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut quis dolor cupiditate porro tenetur mollitia illum
+        illo, sed sapiente rerum quibusdam, ipsa asperiores, est iste sunt dolore perspiciatis voluptatum voluptatibus?
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut quis dolor cupiditate porro tenetur mollitia illum
+        illo, sed sapiente rerum quibusdam, ipsa asperiores, est iste sunt dolore perspiciatis voluptatum voluptatibus?
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut quis dolor cupiditate porro tenetur mollitia illum
+        illo, sed sapiente rerum quibusdam, ipsa asperiores, est iste sunt dolore perspiciatis voluptatum voluptatibus?
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut quis dolor cupiditate porro tenetur mollitia illum
+        illo, sed sapiente rerum quibusdam, ipsa asperiores, est iste sunt dolore perspiciatis voluptatum voluptatibus?
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut quis dolor cupiditate porro tenetur mollitia illum
+        illo, sed sapiente rerum quibusdam, ipsa asperiores, est iste sunt dolore perspiciatis voluptatum voluptatibus?
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut quis dolor cupiditate porro tenetur mollitia illum
+        illo, sed sapiente rerum quibusdam, ipsa asperiores, est iste sunt dolore perspiciatis voluptatum voluptatibus?
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut quis dolor cupiditate porro tenetur mollitia illum
+        illo, sed sapiente rerum quibusdam, ipsa asperiores, est iste sunt dolore perspiciatis voluptatum voluptatibus?
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut quis dolor cupiditate porro tenetur mollitia illum
+        illo, sed sapiente rerum quibusdam, ipsa asperiores, est iste sunt dolore perspiciatis voluptatum voluptatibus?
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut quis dolor cupiditate porro tenetur mollitia illum
+        illo, sed sapiente rerum quibusdam, ipsa asperiores, est iste sunt dolore perspiciatis voluptatum voluptatibus?
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut quis dolor cupiditate porro tenetur mollitia illum
+        illo, sed sapiente rerum quibusdam, ipsa asperiores, est iste sunt dolore perspiciatis voluptatum voluptatibus?
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut quis dolor cupiditate porro tenetur mollitia illum
+        illo, sed sapiente rerum quibusdam, ipsa asperiores, est iste sunt dolore perspiciatis voluptatum voluptatibus?
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut quis dolor cupiditate porro tenetur mollitia illum
+        illo, sed sapiente rerum quibusdam, ipsa asperiores, est iste sunt dolore perspiciatis voluptatum voluptatibus?
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut quis dolor cupiditate porro tenetur mollitia illum
+        illo, sed sapiente rerum quibusdam, ipsa asperiores, est iste sunt dolore perspiciatis voluptatum voluptatibus?
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut quis dolor cupiditate porro tenetur mollitia illum
+        illo, sed sapiente rerum quibusdam, ipsa asperiores, est iste sunt dolore perspiciatis voluptatum voluptatibus?
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut quis dolor cupiditate porro tenetur mollitia illum
+        illo, sed sapiente rerum quibusdam, ipsa asperiores, est iste sunt dolore perspiciatis voluptatum voluptatibus?
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut quis dolor cupiditate porro tenetur mollitia illum
+        illo, sed sapiente rerum quibusdam, ipsa asperiores, est iste sunt dolore perspiciatis voluptatum voluptatibus?
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut quis dolor cupiditate porro tenetur mollitia illum
+        illo, sed sapiente rerum quibusdam, ipsa asperiores, est iste sunt dolore perspiciatis voluptatum voluptatibus?
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut quis dolor cupiditate porro tenetur mollitia illum
+        illo, sed sapiente rerum quibusdam, ipsa asperiores, est iste sunt dolore perspiciatis voluptatum voluptatibus?
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut quis dolor cupiditate porro tenetur mollitia illum
+        illo, sed sapiente rerum quibusdam, ipsa asperiores, est iste sunt dolore perspiciatis voluptatum voluptatibus?
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut quis dolor cupiditate porro tenetur mollitia illum
+        illo, sed sapiente rerum quibusdam, ipsa asperiores, est iste sunt dolore perspiciatis voluptatum voluptatibus?
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut quis dolor cupiditate porro tenetur mollitia illum
+        illo, sed sapiente rerum quibusdam, ipsa asperiores, est iste sunt dolore perspiciatis voluptatum voluptatibus?
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut quis dolor cupiditate porro tenetur mollitia illum
+        illo, sed sapiente rerum quibusdam, ipsa asperiores, est iste sunt dolore perspiciatis voluptatum voluptatibus?
+    </div>
+</body>
+<script>
+    // 全文变量,整个js文件可见
+    let trigger, popup, mask, config;
+
+    // 默认配置
+    const defaultConfig = {
+        position: 'center',
+        offsetY: 0,
+        offsetX: 0,
+        on: 'click',
+        keyToHide: 'Escape',
+    };
+
+    //用户定义js开始
+    boot('.trigger', '.popup', {
+        //position:'left-top',
+        //keyToHide :'a',
+        //on:'dblclick',
+        //offsetX:100,
+        //offsetY:100,
+
+    })
+
+    //用户定义js结束
+
+    /**
+ * 设置必要的弹出层信息
+ * @param {string} triggerSelector 点谁弹出（选择器）
+ * @param {string} popupSelector 弹出谁（选择器）
+ * @param {Object} custom 用户设置
+ */
+
+    function boot(triggerSelector, popupSelector, custom = {}) {
+        //拿到trigger and popup 元素
+        trigger = document.querySelector(triggerSelector);
+        popup = document.querySelector(popupSelector);
+
+        //加载用户设置
+        loadConfig(custom)
+
+        //准备Popup
+        initPopup();
+
+        //准备遮罩
+        initMask();
+
+        //绑定打开相关事件
+        bindOpen();
+
+        //绑定关闭相关事件
+        bindClose();
+    }
+
+    /**
+     * 加载用户设置
+     */
+    function loadConfig(custom) {
+        //将用户设置和默认设置合并起来,存到全文变量中方便通篇调用
+        config = Object.assign({}, defaultConfig, custom);
+    }
+
+    /**
+     * 绑定打开相关事件
+     * 
+     * 如:
+     * 设置popup可见性和样式
+     * 定位popup到合适位置
+     */
+    function bindOpen() {
+        trigger.addEventListener(config.on, () => {
+            //显示popup和遮罩
+            setVisibility(true);
+            //定位popup到合适位置;
+            repositionPopup(config.position, config.offsetY, config.offsetX);
+        })
+    }
+
+    /**
+     * 绑定关闭相关事件
+     * 如:
+     * 设置popup可见性
+     * 绑定关闭快捷键
+     */
+    function bindClose() {
+        //当遮罩被点击时
+        mask.addEventListener(config.on, () => {
+            //popup和遮罩隐藏
+            setVisibility(false);
+        });
+
+        //如果使用来快捷键‘Escape’
+        window.addEventListener('keyup', (e) => {
+            //就隐藏弹出层和遮罩
+            if (e.key == config.keyToHide)
+                setVisibility(false);
+        });
+    }
+
+    /**
+     * 设置是否可见
+     * @param {boolean} show true 为显示 , false为隐藏
+     */
+    function setVisibility(show = true) {
+        //同事隐藏或显示弹出框和遮罩
+        mask.hidden = popup.hidden = !show;
+    }
+
+    /**
+ * 初始化Popup元素
+ */
+    function initPopup() {
+        // Popup一开始不应该显示
+        popup.hidden = true;
+        // 添加插件专属类，这样就可以和插件自带的CSS接应配合
+        popup.classList.add('yo-popup');
+    }
+
+
+    /**
+     * 初始化遮罩
+     */
+    function initMask() {
+        // 造个新元素
+        mask = document.createElement('div');
+        // 加个插件类
+        mask.classList.add('yo-mask');
+        // 默认隐藏
+        mask.hidden = true;
+        // 追加到body最后
+        document.body.appendChild(mask);
+    }
+
+    /**
+ * 定位Popup
+ *
+ * 由于Popup的初始位置往往很奇怪，
+ * 所以每个Popup在打开时都应该调整位置
+ * @param {string} position 支持的位置有：
+ *    center|top|bottom|left|right|top-left|top-right|bottom-left|bottom-right
+ * @param yOffset 标准定位后的纵向偏移，单位：px
+ * @param xOffset 标准定位后的横向偏移，单位：px
+ */
+    function repositionPopup(position = 'center', yOffset = 0, xOffset = 0) {
+        // 获取浏览器窗口的尺寸
+        let windowWidth = window.innerWidth;
+        let windowHeight = window.innerHeight;
+        //获取元素本身的尺寸 弹出框
+        let width = popup.offsetWidth;
+        let height = popup.offsetHeight;
+
+        // 如果位置不是"xxx-xxx"的形式，而仅仅是"xxx"
+        if (!position.includes('-')) {
+            //如果仅指定横向
+            if (position == 'left' || position == 'right')
+                position += '-centery'; //纵向就默认居中,变成 'xxx-centery'
+            //如果仅指定纵向
+            else if (position == 'top' || position == 'bottom')
+                position += '-centerx';//横向就默认居中,变成‘xxx-centerx'
+            else //否则就全部居中,这其中就包含‘center’
+                position = 'centerx-centery';
+        }
+
+        //是否横向居中
+        if (position.includes('centerx'))
+            popup.style.left = windowWidth / 2 - width / 2 + xOffset + 'px';
+
+        //是否纵向居中
+        if (position.includes('centery'))
+            popup.style.top = windowHeight / 2 - height / 2 + yOffset + 'px';
+
+        //是否贴在顶部
+        if (position.includes('top'))
+            popup.style.top = yOffset + 'px';
+
+        //是否贴在底部
+        if (position.includes('bottom'))
+            popup.style.bottom = yOffset + 'px';
+
+        //是否贴在左边
+        if (position.includes('left'))
+            popup.style.left = xOffset + 'px';
+
+        //是否贴在右边
+        if (position.includes('right'))
+            popup.style.right = xOffset + 'px';
+    }   
+</script>
+
+</html>
