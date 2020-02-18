@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .yo-popup {
+            position: fixed;
+            background: #fff;
+            border: 4px solid;
+            padding: 30px;
+            z-index: 1000;
+            font-family: sans-serif;
+            width: 150px;
+            height: 90px;
+        }
+
+        .yo-mask {
+            position: fixed;
+            background: rgba(0, 0, 0, .7);
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            z-index: 999;
+        }
+    </style>
+</head>
+
+<body>
+    <button id="trigger">登录</button>
+    <div id="popup">
+        <button data-popup='top'>top</button>
+        <button data-popup='bottom'>bottom</button>
+        <button data-popup='left'>left</button>
+        <button data-popup='right'>right</button>
+        <button data-popup='center'>center</button>
+        <button data-popup='top-left'>top-left</button>
+        <button data-popup='top-right'>top-right</button>
+        <button data-popup='bottom-left'>bottom-left</button>
+        <button data-popup='bottom-right'>bottom-right</button>
+    </div>
+    <div>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum vel, harum fugit fugiat atque excepturi eos
+        reprehenderit! Pariatur ea quibusdam suscipit saepe amet, vitae nostrum, quasi, nesciunt reprehenderit
+        doloremque repellat?
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum vel, harum fugit fugiat atque excepturi eos
+        reprehenderit! Pariatur ea quibusdam suscipit saepe amet, vitae nostrum, quasi, nesciunt reprehenderit
+        doloremque repellat?
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum vel, harum fugit fugiat atque excepturi eos
+        reprehenderit! Pariatur ea quibusdam suscipit saepe amet, vitae nostrum, quasi, nesciunt reprehenderit
+        doloremque repellat?
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum vel, harum fugit fugiat atque excepturi eos
+        reprehenderit! Pariatur ea quibusdam suscipit saepe amet, vitae nostrum, quasi, nesciunt reprehenderit
+        doloremque repellat?
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum vel, harum fugit fugiat atque excepturi eos
+        reprehenderit! Pariatur ea quibusdam suscipit saepe amet, vitae nostrum, quasi, nesciunt reprehenderit
+        doloremque repellat?
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum vel, harum fugit fugiat atque excepturi eos
+        reprehenderit! Pariatur ea quibusdam suscipit saepe amet, vitae nostrum, quasi, nesciunt reprehenderit
+        doloremque repellat?
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum vel, harum fugit fugiat atque excepturi eos
+        reprehenderit! Pariatur ea quibusdam suscipit saepe amet, vitae nostrum, quasi, nesciunt reprehenderit
+        doloremque repellat?
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum vel, harum fugit fugiat atque excepturi eos
+        reprehenderit! Pariatur ea quibusdam suscipit saepe amet, vitae nostrum, quasi, nesciunt reprehenderit
+        doloremque repellat?
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum vel, harum fugit fugiat atque excepturi eos
+        reprehenderit! Pariatur ea quibusdam suscipit saepe amet, vitae nostrum, quasi, nesciunt reprehenderit
+        doloremque repellat?
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum vel, harum fugit fugiat atque excepturi eos
+        reprehenderit! Pariatur ea quibusdam suscipit saepe amet, vitae nostrum, quasi, nesciunt reprehenderit
+        doloremque repellat?
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum vel, harum fugit fugiat atque excepturi eos
+        reprehenderit! Pariatur ea quibusdam suscipit saepe amet, vitae nostrum, quasi, nesciunt reprehenderit
+        doloremque repellat?
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum vel, harum fugit fugiat atque excepturi eos
+        reprehenderit! Pariatur ea quibusdam suscipit saepe amet, vitae nostrum, quasi, nesciunt reprehenderit
+        doloremque repellat?
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum vel, harum fugit fugiat atque excepturi eos
+        reprehenderit! Pariatur ea quibusdam suscipit saepe amet, vitae nostrum, quasi, nesciunt reprehenderit
+        doloremque repellat?
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum vel, harum fugit fugiat atque excepturi eos
+        reprehenderit! Pariatur ea quibusdam suscipit saepe amet, vitae nostrum, quasi, nesciunt reprehenderit
+        doloremque repellat?
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum vel, harum fugit fugiat atque excepturi eos
+        reprehenderit! Pariatur ea quibusdam suscipit saepe amet, vitae nostrum, quasi, nesciunt reprehenderit
+        doloremque repellat?
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum vel, harum fugit fugiat atque excepturi eos
+        reprehenderit! Pariatur ea quibusdam suscipit saepe amet, vitae nostrum, quasi, nesciunt reprehenderit
+        doloremque repellat?
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum vel, harum fugit fugiat atque excepturi eos
+        reprehenderit! Pariatur ea quibusdam suscipit saepe amet, vitae nostrum, quasi, nesciunt reprehenderit
+        doloremque repellat?
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum vel, harum fugit fugiat atque excepturi eos
+        reprehenderit! Pariatur ea quibusdam suscipit saepe amet, vitae nostrum, quasi, nesciunt reprehenderit
+        doloremque repellat?
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum vel, harum fugit fugiat atque excepturi eos
+        reprehenderit! Pariatur ea quibusdam suscipit saepe amet, vitae nostrum, quasi, nesciunt reprehenderit
+        doloremque repellat?
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum vel, harum fugit fugiat atque excepturi eos
+        reprehenderit! Pariatur ea quibusdam suscipit saepe amet, vitae nostrum, quasi, nesciunt reprehenderit
+        doloremque repellat?
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum vel, harum fugit fugiat atque excepturi eos
+        reprehenderit! Pariatur ea quibusdam suscipit saepe amet, vitae nostrum, quasi, nesciunt reprehenderit
+        doloremque repellat?
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum vel, harum fugit fugiat atque excepturi eos
+        reprehenderit! Pariatur ea quibusdam suscipit saepe amet, vitae nostrum, quasi, nesciunt reprehenderit
+        doloremque repellat?
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum vel, harum fugit fugiat atque excepturi eos
+        reprehenderit! Pariatur ea quibusdam suscipit saepe amet, vitae nostrum, quasi, nesciunt reprehenderit
+        doloremque repellat?
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum vel, harum fugit fugiat atque excepturi eos
+        reprehenderit! Pariatur ea quibusdam suscipit saepe amet, vitae nostrum, quasi, nesciunt reprehenderit
+        doloremque repellat?
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum vel, harum fugit fugiat atque excepturi eos
+        reprehenderit! Pariatur ea quibusdam suscipit saepe amet, vitae nostrum, quasi, nesciunt reprehenderit
+        doloremque repellat?
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum vel, harum fugit fugiat atque excepturi eos
+        reprehenderit! Pariatur ea quibusdam suscipit saepe amet, vitae nostrum, quasi, nesciunt reprehenderit
+        doloremque repellat?
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum vel, harum fugit fugiat atque excepturi eos
+        reprehenderit! Pariatur ea quibusdam suscipit saepe amet, vitae nostrum, quasi, nesciunt reprehenderit
+        doloremque repellat?
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum vel, harum fugit fugiat atque excepturi eos
+        reprehenderit! Pariatur ea quibusdam suscipit saepe amet, vitae nostrum, quasi, nesciunt reprehenderit
+        doloremque repellat?
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum vel, harum fugit fugiat atque excepturi eos
+        reprehenderit! Pariatur ea quibusdam suscipit saepe amet, vitae nostrum, quasi, nesciunt reprehenderit
+        doloremque repellat?
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum vel, harum fugit fugiat atque excepturi eos
+        reprehenderit! Pariatur ea quibusdam suscipit saepe amet, vitae nostrum, quasi, nesciunt reprehenderit
+        doloremque repellat?
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum vel, harum fugit fugiat atque excepturi eos
+        reprehenderit! Pariatur ea quibusdam suscipit saepe amet, vitae nostrum, quasi, nesciunt reprehenderit
+        doloremque repellat?
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum vel, harum fugit fugiat atque excepturi eos
+        reprehenderit! Pariatur ea quibusdam suscipit saepe amet, vitae nostrum, quasi, nesciunt reprehenderit
+        doloremque repellat?
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum vel, harum fugit fugiat atque excepturi eos
+        reprehenderit! Pariatur ea quibusdam suscipit saepe amet, vitae nostrum, quasi, nesciunt reprehenderit
+        doloremque repellat?
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum vel, harum fugit fugiat atque excepturi eos
+        reprehenderit! Pariatur ea quibusdam suscipit saepe amet, vitae nostrum, quasi, nesciunt reprehenderit
+        doloremque repellat?
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum vel, harum fugit fugiat atque excepturi eos
+        reprehenderit! Pariatur ea quibusdam suscipit saepe amet, vitae nostrum, quasi, nesciunt reprehenderit
+        doloremque repellat?
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum vel, harum fugit fugiat atque excepturi eos
+        reprehenderit! Pariatur ea quibusdam suscipit saepe amet, vitae nostrum, quasi, nesciunt reprehenderit
+        doloremque repellat?
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum vel, harum fugit fugiat atque excepturi eos
+        reprehenderit! Pariatur ea quibusdam suscipit saepe amet, vitae nostrum, quasi, nesciunt reprehenderit
+        doloremque repellat?
+    </div>
+</body>
+<script>
+    let trigger, popup, mask, config;
+    let defaultConfig = {
+        position: 'center',
+        offsetY: 0,
+        offsetX: 0,
+        on: 'click',
+        keyToHide: 'Escape',
+    }
+
+    boot('#trigger', '#popup', {});
+    function boot(triggerSelector, popupSelector, custom = {}) {
+        trigger = document.querySelector(triggerSelector);
+        popup = document.querySelector(popupSelector);
+
+        loadConfig(custom);
+        initPopup();
+        initMask();
+        bindOpen();
+        bindClose();
+    }
+
+
+    function loadConfig(custom) {
+        config = Object.assign({}, defaultConfig, custom);
+    }
+    function initPopup() {
+        popup.hidden = true;
+        popup.classList.add('yo-popup');
+    }
+
+    function initMask() {
+        mask = document.createElement('div');
+        mask.classList.add('yo-mask');
+        mask.hidden = true;
+        document.body.appendChild(mask);
+    }
+
+    function bindOpen() {
+        trigger.addEventListener(config.on, () => {
+            setVisibility(true);
+            rePositionPopup(config.position, config.offsetY, config.offsetX);
+        });
+        btnPosition();
+    }
+
+    function btnPosition() {
+        popup.addEventListener('click', (e) => {
+            rePositionPopup(e.target.dataset.popup);
+        })
+    }
+
+    function rePositionPopup(position = 'center', yOffset = 0, xOffset = 0) {
+        let width = popup.offsetWidth;
+        let heigth = popup.offsetHeight;
+        let windowsWidth = window.innerWidth;
+        let windowsHeight = window.innerHeight;
+
+        if (!position.includes('-')) {
+            if (position == 'left' || position == 'right')
+                position += '-centery';
+            else if (position == 'top' || position == 'bottom')
+                position += '-centerx';
+            else
+                position = 'centerx-centery';
+        }
+
+        if (position.includes('centerx'))
+            popup.style.left = windowsWidth / 2 - width / 2 + xOffset + 'px';
+        if (position.includes('centery'))
+            popup.style.top = windowsHeight / 2 - heigth / 2 + yOffset + 'px';
+
+        if (position.includes('left')) {
+            popup.style.left = xOffset + 'px';
+        }
+        if (position.includes('right')) {
+            popup.style.left = 'auto';
+            popup.style.right = xOffset + 'px';
+        }
+        if (position.includes('top')) {
+            popup.style.top = yOffset + 'px';
+        }
+        if (position.includes('bottom')) {
+            popup.style.top = 'auto';
+            popup.style.bottom = yOffset + 'px';
+        }
+    }
+
+    function bindClose() {
+        mask.addEventListener(config.on, () => {
+            setVisibility(false);
+        })
+        window.addEventListener('keyup', (e) => {
+            if (e.code === config.keyToHide)
+                setVisibility(false);
+        })
+    }
+
+    function setVisibility(show = true) {
+        mask.hidden = popup.hidden = !show;
+    }
+
+
+</script>
+
+</html>
