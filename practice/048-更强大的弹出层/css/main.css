@@ -1,0 +1,24 @@
+.yo-popup {
+    position: fixed;
+    background: #fff;
+    padding: 30px;
+    border: 4px solid;
+    z-index: 1000;
+    width: 140px;
+    height: 100px;
+}
+
+.yo-mask {
+    position: fixed;
+    background: rgba(0, 0, 0, .7);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 999;
+
+}
+
+[hidden] {
+    display: none !important;
+}
