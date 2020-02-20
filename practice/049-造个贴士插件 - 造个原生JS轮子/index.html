@@ -1,0 +1,100 @@
+<style>
+    button {
+        margin: 200px;
+    }
+
+    .popup {
+        position: absolute;
+        background: #fff;
+        padding: 10px;
+        display: inline-block;
+        border: 4px solid;
+        box-shadow: 0 2px 3px rgba(0, 0, 0, .3);
+        /* margin: 5px; */
+    }
+
+    [hidden] {
+        display: none !important;
+    }
+</style>
+<button data-popout="Yo yo yo....">Yo</button>
+<!-- <button data-popout="Ha ha haha ...">Ha</button>
+<button data-popout="1 ha haha ...">1</button>
+<button data-popout="2 ha haha ...">2</button> -->
+<script>
+
+    let triggers = new Set();
+    let lasttrigger, config;
+    let defaultConfig = {
+        position: 'top-right',
+    };
+    boot({});
+    function boot(custom = {}) {
+        loadConfig(custom);
+        bindEvents();
+    }
+
+    function loadConfig(custom) {
+        config = Object.assign({}, defaultConfig, custom);
+    }
+    function bindEvents() {
+        window.addEventListener('click', (e) => {
+            let el = e.target;
+            let content = e.target.dataset.popout
+            if (content) {
+                lasttrigger && hide(lasttrigger);
+                lasttrigger = el;
+                show(el, content);
+                triggers.add(el);
+            } else {
+                hideAll();
+            }
+            reposition(el, config.position);
+        })
+    }
+
+    function hide(el) {
+        el.$popup.hidden = true;
+    }
+
+    //显示button对应的popup 弹出框
+    function show(button, content) {
+        if (!button.$popup) {
+            let popup = document.createElement('div');
+            popup.classList.add('popup');
+            popup.innerText = content;
+            button.$popup = popup;
+            document.body.appendChild(popup);
+        } else {
+            button.$popup.hidden = false;
+        }
+    }
+
+    function hideAll() {
+        triggers.forEach(button => {
+            console.log(button.$popup);
+            button.$popup.hidden = true;
+        });
+    }
+
+    function reposition(button, position) {
+        let p = button.$popup;
+        switch (position) {
+            case 'bottom':
+                p.style.left = button.getBoundingClientRect().left + 'px';
+                p.style.top = button.getBoundingClientRect().top + button.offsetHeight + 5 + 'px';
+                break;
+
+            case 'right':
+                p.style.left = button.getBoundingClientRect().left + button.offsetWidth + 5 + 'px';
+                p.style.top = button.getBoundingClientRect().top + 'px';
+                break;
+
+            case 'top-right':
+                p.style.left = button.getBoundingClientRect().left + button.offsetWidth + 5 + 'px';
+                p.style.top = button.getBoundingClientRect().top - p.offsetHeight + 'px';
+                break;
+        }
+
+    }
+</script>
