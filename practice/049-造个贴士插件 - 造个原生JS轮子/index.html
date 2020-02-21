@@ -49,13 +49,9 @@
             } else {
                 hideAll();
             }
-            reposition(el, config.position);
         })
     }
 
-    function hide(el) {
-        el.$popup.hidden = true;
-    }
 
     //显示button对应的popup 弹出框
     function show(button, content) {
@@ -68,6 +64,11 @@
         } else {
             button.$popup.hidden = false;
         }
+        reposition(el, config.position);
+    }
+
+    function hide(el) {
+        el.$popup.hidden = true;
     }
 
     function hideAll() {
