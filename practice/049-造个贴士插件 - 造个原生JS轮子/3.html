@@ -1,0 +1,94 @@
+<style>
+    .popup {
+        display: inline-block;
+        position: fixed;
+        padding: 10px;
+        border: 4px solid;
+        border-radius: 3px;
+        background: #fff;
+        box-shadow: 0 3px 5px rgba(0, 0, 0, .3);
+    }
+
+    [hidden] {
+        display: none !important;
+    }
+
+    button {
+        margin: 5em;
+    }
+</style>
+<button data-position='top' data-popout='Yo...,hello ,world'>top显示文本内容</button>
+<button data-position='left' data-popout='hello,js'>left显示文本内容a.....</button>
+<button data-position='bottom' data-popout='crazy'>bottom显示文本内容,hahah,yo...</button>
+<button data-position='right' data-popout='crazy'>right显示文本内容,hahah,yo...</button>
+<button data-position='top-right' data-popout='crazy'>top-right显示文本内容,hahah,yo...</button>
+<script>
+    let triggers = new Set();
+    let prevtrigger;
+    boot();
+    function boot() {
+        window.addEventListener('click', e => {
+            let el = e.target;
+            let content = e.target.dataset.popout
+            if (content) { //如果点击的事件源有一个自定义的属性,那么就显示弹出框,并显示这个属性的内容,
+                show(el, content);
+                triggers.add(el);
+                prevtrigger && hide(prevtrigger);
+                prevtrigger = el;
+            } else //事件源不是按钮,页面其他的位置或者按钮没有自定义的属性,就把所有弹出层隐藏
+                hideAll();
+        })
+    }
+
+    function show(button, content) { //显示弹出框
+        //如果按钮没有自定义的popout属性,就创建一个,追加到最后显示; 如果有就直接显示.
+        if (!button.$popout) {
+            let popout = document.createElement('div');
+            popout.classList.add('popup');
+            popout.innerText = content;
+            button.$popout = popout;
+            document.body.appendChild(popout);
+        } else {
+            button.$popout.hidden = false;
+        }
+        reposition(button);
+    }
+
+    function hide(el) {
+        el.$popout.hidden = true;
+    }
+
+    function hideAll() {
+        triggers.forEach(button => {
+            button.$popout.hidden = true;
+        });
+    }
+
+    function reposition(button) {
+        let p = button.$popout;
+        let buttonPosition = button.getBoundingClientRect();
+
+        switch (button.dataset.position) {
+            case 'bottom':
+                p.style.left = buttonPosition.left + 'px';
+                p.style.top = buttonPosition.top + button.offsetHeight + 5 + 'px';
+                break;
+            case 'top':
+                p.style.left = buttonPosition.left + 'px';
+                p.style.top = buttonPosition.top - p.offsetHeight - 5 + 'px';
+                break;
+            case 'left':
+                p.style.left = buttonPosition.left - p.offsetWidth - 5 + 'px';
+                p.style.top = buttonPosition.top + 'px';
+                break;
+            case 'right':
+                p.style.left = buttonPosition.left + button.offsetWidth + 'px';
+                p.style.top = buttonPosition.top + 'px';
+                break;
+            case 'top-right':
+                p.style.left = buttonPosition.left + button.offsetWidth + 'px';
+                p.style.top = buttonPosition.top - p.offsetHeight + 'px';
+                break;
+        }
+    }
+</script>
