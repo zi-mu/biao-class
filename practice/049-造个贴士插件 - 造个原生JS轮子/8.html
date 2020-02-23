@@ -1,0 +1,81 @@
+<style>
+    .pop {
+        display: inline-block;
+        position: absolute;
+        padding: 20px;
+        border: 3px solid;
+        box-shadow: 0 2px 3px rgba(0, 0, 0, .3);
+        background: #fff;
+    }
+
+    button {
+        margin: 10em;
+    }
+
+    [hidden] {
+        display: none !important;
+    }
+</style>
+<button data-popout="Yo...." data-position="left">Yo.</button>
+<button data-popout="hello...." data-position="right">hello.</button>
+<script>
+    let triggers = new Set();
+    let lastTrigger;
+
+    boot();
+    function boot() {
+        bindEvents();
+    }
+
+    function bindEvents() {
+        window.addEventListener('click', e => {
+            let el = e.target;
+            let content = el.dataset.popout;
+            if (content) {
+                lastTrigger && hide(lastTrigger);
+                lastTrigger = el;
+                show(el, content);
+                triggers.add(el);
+            } else
+                hideAll();
+        })
+    }
+
+    function show(button, content) {
+        if (!button.$popout) {
+            let popout = document.createElement('div');
+            popout.classList.add('pop');
+            popout.innerText = content;
+            button.$popout = popout;
+            document.body.appendChild(popout);
+        } else
+            button.$popout.hidden = false;
+
+        reposition(button);
+    }
+
+    function hide(el) {
+        el.$popout.hidden = true;
+    }
+    function hideAll() {
+        triggers.forEach(button => {
+            button.$popout.hidden = true;
+        });
+    }
+
+    function reposition(button) {
+        let p = button.$popout;
+        let buttonPosition = button.getBoundingClientRect();
+
+        switch (button.dataset.position) {
+            case 'left':
+                p.style.left = buttonPosition.left - p.offsetWidth - 5 + 'px';
+                p.style.top = buttonPosition.top + 'px';
+                break;
+            case 'right':
+                p.style.left = buttonPosition.left + button.offsetWidth + 5 + 'px';
+                p.style.top = buttonPosition.top + 'px';
+                break;
+        }
+    }
+</script>
