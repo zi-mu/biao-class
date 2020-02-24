@@ -1,0 +1,54 @@
+<style>
+    .dropdown {
+        display: inline-block;
+        border: 2px solid;
+        min-width: 4em;
+    }
+
+    .dropdown a {
+        display: block;
+        padding: 10px;
+    }
+</style>
+<div id="dropdown" class="dropdown"></div>
+<script>
+    let list = [
+        {
+            text: 'amazon',
+            href: 'https://amazon.com'
+        },
+        {
+            text: 'baidu',
+            href: 'https://baidu.com'
+        },
+        {
+            text: 'chaoshi.tmall',
+            href: 'https://chaoshi.tmall.com'
+        },
+        {
+            text: 'douban',
+            href: 'https://douban.com'
+        },
+    ];
+    boot();
+    function boot() {
+        render();
+        setInterval(() => {
+            list.push({
+                text: 'ebay',
+                href: 'https://ebay.com'
+            });
+            render();
+        }, 1000);
+    }
+
+    function render() {
+        dropdown.innerHTML = '';
+        list.forEach(it => {
+            let a = document.createElement('a');
+            a.innerText = it.text;
+            a.href = it.href;
+            dropdown.appendChild(a);
+        })
+    }
+</script>
