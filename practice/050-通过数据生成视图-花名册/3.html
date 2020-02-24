@@ -1,0 +1,58 @@
+<style>
+    .dropdown {
+        display: inline-block;
+        border: 3px solid;
+        min-width: 4em;
+    }
+
+    .dropdown a {
+        display: block;
+        padding: 5px;
+    }
+</style>
+<div id="dropdown" class="dropdown"></div>
+<script>
+    let list = [
+        {
+            text: 'amazon',
+            href: 'https://amazon.com',
+        },
+        {
+            text: 'baidu',
+            href: 'https://baidu.com',
+        },
+        {
+            text: 'chaoshi.tmall',
+            href: 'https://chaoshi.tmall.com',
+        },
+        {
+            text: 'douban',
+            href: 'https://douban.com',
+        },
+    ];
+    boot();
+    function boot() {
+        render();
+        setInterval(() => {
+            list.push({
+                text: 'ebay',
+                href: 'https://ebay.com',
+            });
+            render();
+        }, 500);
+    }
+
+    function render() {
+        //每次循环数组,把里面的每一项加入到dropdown中
+        // list.forEach(it=>{
+        // dropdown.appendChild(new obj);
+        //  })
+        dropdown.innerHTML = '';
+        list.forEach(it => {
+            let a = document.createElement('a');
+            a.innerText = it.text;
+            a.href = it.href;
+            dropdown.append(a);
+        })
+    }
+</script>
