@@ -1,0 +1,65 @@
+<style>
+    table {
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    th,
+    td {
+        padding: 5px;
+        border: 1px solid;
+        text-align: right;
+    }
+</style>
+<h1>贝贝山中学花名册</h1>
+<table>
+    <thead>
+        <th>姓名</th>
+        <th>性别</th>
+        <th>分数</th>
+        <th>操作</th>
+    </thead>
+    <tbody id='tbody'></tbody>
+</table>
+<script>
+    let users = [
+        {
+            name: '李拴蛋',
+            gender: '男',
+            score: 90,
+        },
+        {
+            name: '王花花',
+            gender: '女',
+            score: 50,
+        },
+        {
+            name: '赵克爽',
+            gender: '男',
+            score: 60,
+        },
+    ];
+
+    boot();
+    function boot() {
+        bindEvents();
+    }
+
+    function bindEvents() {
+        users.forEach((user, i) => {
+            let tr = document.createElement('tr');
+            tr.innerHTML = `
+                <td>${user.name}</td>
+                <td>${user.gender}</td>
+                <td>${user.score}</td>
+                <td><button class='del'>删除</button></td>
+            `;
+            tbody.appendChild(tr);
+            let delButton = tr.querySelector('.del');
+            delButton.addEventListener('click', () => {
+                users.splice(i, 1);
+                tr.remove();
+            })
+        })
+    }
+</script>
