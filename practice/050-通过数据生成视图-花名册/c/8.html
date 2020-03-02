@@ -1,0 +1,101 @@
+<style>
+    :root {
+        font-family: sans-serif;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    th,
+    td {
+        border: 2px solid;
+        padding: .5em;
+        text-align: left;
+    }
+
+    .toolbar {
+        margin: .5em 0;
+    }
+</style>
+<h1>贝贝山中学花名册</h1>
+<div class="toolbar">
+    <div id="score-filter">
+        <button data-max='100' data-min='0'>查看全部</button>
+        <button data-max='100' data-min='80'>只看学霸</button>
+        <button data-max='80' data-min='60'>只看学酥</button>
+        <button data-max='60' data-min='0'>只看学渣</button>
+    </div>
+</div>
+<table>
+    <thead>
+        <th>姓名</th>
+        <th>性别</th>
+        <th>分数</th>
+        <th>操作</th>
+    </thead>
+    <tbody id="tbody"></tbody>
+</table>
+<script>
+    let users = [
+        {
+            name: '李拴蛋',
+            gender: '男',
+            score: 90,
+        },
+        {
+            name: '王花花',
+            gender: '女',
+            score: 50,
+        },
+        {
+            name: '赵克爽',
+            gender: '男',
+            score: 65,
+        },
+    ];
+    let tbody = document.querySelector('#tbody');
+    let scoreFilter = document.querySelector('#score-filter');
+
+    boot();
+    function boot() {
+        render();
+        bindEvents();
+    }
+
+    function render(range) {
+        tbody.innerHTML = '';
+        users.forEach((user, i) => {
+            if (range) {
+                if (!(user.score < range.max && user.score > range.min))
+                    return;
+            }
+
+            let tr = document.createElement('tr');
+            tr.innerHTML = `
+                <td>${user.name}</td>
+                <td>${user.gender}</td>
+                <td>${user.score}</td>
+                <td><button class='del'>删除</button></td>
+            `;
+            tbody.appendChild(tr);
+
+            let delButton = tr.querySelector('.del');
+            delButton.addEventListener('click', () => {
+                users.splice(i, 1);
+                tr.remove();
+                render();
+            })
+        })
+    };
+
+    function bindEvents() {
+        scoreFilter.addEventListener('click', e => {
+            if (e.target.nodeName != 'BUTTON')
+                return;
+            let range = e.target.dataset;
+            render(range);
+        })
+    }
+</script>
