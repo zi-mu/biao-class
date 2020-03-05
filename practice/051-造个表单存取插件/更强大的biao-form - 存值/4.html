@@ -1,0 +1,94 @@
+<style>
+    :root {
+        font-size: 16px;
+    }
+
+    input,
+    button {
+        font-size: inherit;
+        padding: .2em .3em;
+        margin: .2em auto;
+    }
+
+    input {
+        width: 100%;
+    }
+
+    input[type=checkbox],
+    input[type=radio] {
+        width: auto;
+    }
+</style>
+<form id="b">
+    <input type="text" name="name" placeholder="姓名">
+    <input type="number" name="age" placeholder="年龄">
+    <input type="email" name="email" placeholder="邮箱">
+    <input type="date" name="birthday" placeholder="生日">
+    <div>
+        性别
+        <label>
+            男<input type="radio" name="gender" value="male">
+        </label>
+        <label>
+            女<input type="radio" name="gender" value="female">
+        </label>
+    </div>
+    <div>
+        取向
+        <label>
+            男 <input type="checkbox" name="orientation" value="male">
+        </label>
+        <label>
+            女 <input type="checkbox" name="orientation" value="female">
+        </label>
+        <label>
+            车 <input type="checkbox" name="orientation" value="car">
+        </label>
+    </div>
+    <input type="number" name="balance" placeholder="余额">
+    <button type="submit">提交</button>
+</form>
+<script>
+    function setData(data, form) {
+        //循环对象中的每一项
+        for (let key in data) {
+            // 存每一项的值
+            let val = data[key];
+            //通过data中每一项key,找到对应的输入组件
+            let input = form.querySelector(`[name=${key}]`);
+            //判断组件的类型
+            switch (input.type) {
+                //如果组件类型是radio, 
+                case 'radio':
+                    // 选中类型为"radio"，且name为本项的键，且值为本项值的元素
+                    // 以 gender: 'male' 为例（比如说循环到{... gender: 'male', ...}这一项）
+                    // radio 就等于 <input type=radio name=gender value=male>
+                    // 
+                    let radio = form.querySelector(`[type=radio][value=${val}]`)
+                    radio && (radio.checked = true); //存在就打勾
+                    break;
+                case 'checkbox':
+                    // 如果是复选框说明值是数组
+                    // 以 orientation: ['male', 'female'] 为例（比如说循环到{... orientation: ['male', 'female'], ...}这一项）
+
+                    data[key].forEach(it => {
+                        let checkbox = form.querySelector(`[type=checkbox][value=${it}]`)
+                        checkbox && (checkbox.checked = true);
+                    });
+                    break;
+                default:
+                    input.value = data[key];
+            }
+        }
+    }
+    let user = {
+        name: 'whh',
+        age: 15,
+        email: 'jack@gmail.com',
+        birthday: '1990-01-02',
+        gender: 'male',
+        orientation: ['male', 'female', 'car'],
+        balance: 11,
+    }
+    setData(user, document.querySelector('#b'));
+</script>
