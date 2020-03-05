@@ -1,0 +1,83 @@
+<style>
+    :root {
+        font-size: 16px;
+        font-family: sans-serif;
+    }
+
+    input,
+    button {
+        margin: .2em 0;
+        padding: .2em .3em;
+        font-size: inherit;
+    }
+
+    input {
+        width: 100%;
+    }
+
+    input[type=radio],
+    input[type=checkbox] {
+        width: auto;
+    }
+</style>
+<form id='a'>
+    <input type="text" name='name' placeholder="姓名">
+    <input type="text" name='age' placeholder="年龄">
+    <input type="text" name='email' placeholder="邮箱">
+    <input type="text" name='birthday' placeholder="出生日期">
+    <div>性别
+        <label>
+            男<input type='radio' name='gender' value='male'>
+        </label>
+        <label>
+            女<input type='radio' name='gender' value='female'>
+        </label>
+    </div>
+    <div>
+        取向
+        <label>
+            男<input type="checkbox" name='orientation' value='male'>
+        </label>
+        <label>
+            女<input type="checkbox" name='orientation' value='female'>
+        </label>
+        <label>
+            车<input type="checkbox" name='orientation' value='car'>
+        </label>
+    </div>
+    <input type="number" name='balance' placeholder="余额">
+    <button type="submit">提交</button>
+</form>
+
+<script>
+    function setData(data, form) {
+        for (let key in data) {
+            let val = data[key]
+            let input = form.querySelector(`[name=${key}]`);
+            switch (input.type) {
+                case 'radio':
+                    let radio = form.querySelector(`[type=radio][value=${val}]`)
+                    radio && (radio.checked = true);
+                    break;
+                case 'checkbox':
+                    val.forEach(it => {
+                        let checkbox = form.querySelector(`[type=checkbox][value=${it}]`)
+                        checkbox && (checkbox.checked = true)
+                    });
+                    break;
+                default:
+                    input.value = data[key];
+            }
+        }
+    }
+    let data = {
+        name: 'wuu',
+        age: 19,
+        email: 'jack@gmail.com',
+        birthday: '1990-01-03',
+        gender: 'male',
+        orientation: ['male', 'car'],
+        balance: 10,
+    }
+    setData(data, document.querySelector('#a'));
+</script>
