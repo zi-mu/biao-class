@@ -53,7 +53,7 @@
     function setData(data, form) {
         for (let key in data) {
             let val = data[key]
-            let input = form.querySelector(`[name=${key}]`);
+            let input = form.querySelector(`[name=${key}]`); // form.querySelector('[name='+key+']')
             switch (input.type) {
                 case 'radio':
                     let radio = form.querySelector(`[type=radio][value=${val}]`)
