@@ -1,0 +1,60 @@
+<style>
+    :root {
+        font-size: 16px;
+        font-family: sans-serif;
+    }
+
+    button,
+    input {
+        margin: .2em 0;
+        padding: .2em .3em;
+        font-size: 14px;
+    }
+
+    input {
+        width: 100%;
+    }
+
+    input[type=radio],
+    input[type=checkbox] {
+        width: auto;
+    }
+</style>
+<form id='a'>
+    <input type="text" name="name" placeholder="name">
+    <input type="number" name="age" placeholder="age">
+    <input type="email" name="email" placeholder="email">
+    <input type="birthday" name="birthday" placeholder="birthday">
+    <div>
+        性别
+        <label for="male">男</label>
+        <input type="radio" name="gender" id="male" value='male'>
+        <label for="female">女</label>
+        <input type="radio" name="gender" id="female" value='female'>
+    </div>
+    <div>
+        取向
+        <label for="male">男</label>
+        <input type="checkbox" name="orientation" id="male" value='male'>
+        <label for="female">女</label>
+        <input type="checkbox" name="orientation" id="female" value='female'>
+        <label for="car">车</label>
+        <input type="checkbox" name="orientation" id="car" value='car'>
+    </div>
+    <input type="number" name="balance" placeholder="balance">
+    <button type="submit">提交</button>
+</form>
+<script src="./biaoForm.js"></script>
+<script>
+    let user = {
+        name: 'whh',
+        age: 18,
+        email: 'a@gmail.com',
+        birthday: '1990-03-03',
+        gender: 'female',
+        orientation: ['male', 'car'],
+        balance: 10,
+    }
+    biaoForm.setData(user, a);
+    console.log(biaoForm.getData(a));
+</script>
