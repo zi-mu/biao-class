@@ -1,0 +1,11 @@
+<script>
+    let http = new XMLHttpRequest();
+    http.open('get', 'https://api.github.com/search/users?q=zi-mu');
+    http.send();
+
+    http.addEventListener('load', () => {
+
+        let data = JSON.parse(http.responseText);
+        console.log(data);
+    })
+</script>
