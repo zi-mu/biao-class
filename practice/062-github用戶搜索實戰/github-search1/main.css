@@ -1,0 +1,271 @@
+/* * {
+    box-sizing: border-box;
+}
+
+:root {
+    font-family: sans-serif;
+    font-size: 15px;
+    color: #444;
+    background: #eee;
+}
+
+h1 {
+    text-align: center;
+    font-size: 4rem;
+
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+input,
+button {
+    border: 1px solid rgba(0, 0, 0, .2);
+    padding: .8em;
+    font-size: inherit;
+    margin-bottom: .5em;
+    outline: 0;
+}
+
+input:focus,
+button:focus {
+    border-color: transparent;
+    outline: 3px solid rgba(130, 64, 255, .4);
+}
+
+form input,
+form button {
+    width: 100%;
+}
+
+button {
+    background: #000;
+    color: #fff;
+}
+
+main {
+    padding: .5em;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 40em;
+}
+
+.item {
+    font-size: 0;
+    border: 1px solid rgba(0, 0, 0, .2);
+    box-shadow: 0 0 2px rgba(0, 0, 0, .2);
+    margin-bottom: .5rem;
+    background: #fff;
+}
+
+.item>* {
+    display: inline-block;
+    font-size: 1rem;
+    vertical-align: middle;
+}
+
+.item .avator {
+    width: 15%;
+    padding: .5em;
+}
+
+.item .detail {
+    width: 85%;
+    padding: .5em;
+    color: #aaa;
+}
+
+.item a {
+    color: inherit;
+}
+
+.item .detail strong {
+    color: #444;
+}
+
+.item .detail>* {
+    margin: .1em 0;
+} */
+
+/* 
+
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    font-family: sans-serif;
+    font-size: 15px;
+    color: #444;
+    background: #eee;
+}
+
+h1 {
+    text-align: center;
+    font-size: 3em;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+input,
+button {
+    border: 1px solid rgba(0, 0, 0, .2);
+    padding: .7em;
+    outline: 0;
+    font-size: inherit;
+    margin-bottom: .5em;
+}
+
+input:focus,
+button:focus {
+    border-color: transparent;
+    outline: 2px solid #000;
+}
+
+button {
+    background: #000;
+    color: #fff;
+}
+
+form input,
+form button {
+    width: 100%;
+}
+
+main {
+    max-width: 40em;
+    margin-left: auto;
+    margin-right: auto;
+    padding: .5em;
+}
+
+.item {
+    background: #fff;
+    font-size: 0;
+    border: 1px solid rgba(0, 0, 0, .2);
+    box-shadow: 0 0 2px rgba(0, 0, 0, .2);
+    margin-bottom: .5rem;
+}
+
+.item>* {
+    display: inline-block;
+    font-size: 1rem;
+    vertical-align: top;
+}
+
+.item .avatar {
+    width: 10%;
+    padding: .5em;
+}
+
+.item .detail {
+    width: 90%;
+    padding: .5em;
+    color: #aaa;
+}
+
+.item a {
+    color: inherit;
+}
+
+.item .detail strong {
+    color: #444;
+}
+
+.item .detail>* {
+    margin: .1em 0;
+} */
+
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    font-family: sans-serif;
+    font-size: 15px;
+    color: #444;
+    background: #eee;
+}
+
+h1 {
+    text-align: center;
+    font-size: 3em;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+input,
+button {
+    border: 1px solid rgba(0, 0, 0, .2);
+    outline: 0;
+    padding: .5em;
+    font-size: inherit;
+    margin-bottom: 2em;
+}
+
+input:focus,
+button:focus {
+    border-color: transparent;
+    outline: 2px solid #000;
+}
+
+button {
+    background: #000;
+    color: #fff;
+}
+
+form input,
+form button {
+    width: 100%;
+}
+
+main {
+    max-width: 40em;
+    margin-left: auto;
+    margin-right: auto;
+    padding: .5em;
+}
+
+.item {
+    font-size: 0;
+    border: 1px solid rgba(0, 0, 0, .2);
+    margin-bottom: .5rem;
+    background: #fff;
+}
+
+.item>* {
+    display: inline-block;
+    font-size: 1rem;
+    vertical-align: top;
+}
+
+.item .avatar {
+    width: 10%;
+    padding: .5em;
+}
+
+.item .detail {
+    width: 70%;
+    padding: .5em;
+    color: #aaa;
+}
+
+.item a {
+    color: inherit;
+}
+
+.item .detail strong {
+    color: #444;
+}
+
+.item .detail>* {
+    margin: .1em 0;
+}
