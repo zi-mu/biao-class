@@ -1,0 +1,88 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    font-family: sans-serif;
+    font-size: 15px;
+    background: #eee;
+    color: #444;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2em;
+    text-transform: uppercase;
+}
+
+input,
+button {
+    border: 1px solid #aaa;
+    outline: 0;
+    padding: .9em;
+    margin-bottom: 2em;
+}
+
+input:focus,
+button:focus {
+    outline: 2px solid #333;
+    border-color: transparent;
+}
+
+button {
+    background: #000;
+    color: #fff;
+}
+
+form input,
+form button {
+    width: 100%;
+}
+
+main {
+    max-width: 50em;
+    margin-left: auto;
+    margin-right: auto;
+    padding: .5em;
+}
+
+.item {
+    margin-bottom: .5rem;
+    font-size: 0;
+    border: 1px solid #aaa;
+    background: #fff;
+}
+
+.item>* {
+    display: inline-block;
+    font-size: 1rem;
+    vertical-align: top;
+}
+
+.item .avatar {
+    width: 10%;
+    padding: .5em;
+}
+
+.item .detail {
+    width: 80%;
+    padding: .5em;
+    color: #aaa;
+}
+
+.item a {
+    color: inherit;
+}
+
+.item .detail strong {
+    color: #444;
+}
+
+.item .detail>* {
+    margin: .1em 0;
+}
