@@ -1,0 +1,89 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    background: #eee;
+    color: #444;
+    font-family: sans-serif;
+    font-size: 15px;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+h1 {
+    font-size: 2em;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+input,
+button {
+    border: 1px solid #aaa;
+    outline: 0;
+    padding: .7em;
+    font-size: inherit;
+    margin-bottom: .5em;
+}
+
+input:focus,
+button:focus {
+    outline: 2px solid #000;
+    border-color: transparent;
+}
+
+button {
+    background: #000;
+    color: #fff;
+}
+
+form input,
+form button {
+    width: 100%;
+}
+
+main {
+    max-width: 40em;
+    margin-left: auto;
+    margin-right: auto;
+    padding: .5em;
+}
+
+.item {
+    font-size: 0;
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, .2);
+    margin-bottom: .5rem;
+}
+
+.item>* {
+    font-size: 1rem;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.item .avatar {
+    width: 10%;
+    padding: .5em;
+}
+
+.item .detail {
+    width: 90%;
+    padding: .5em;
+    color: #aaa;
+}
+
+.item a {
+    color: inherit;
+}
+
+.item .detail strong {
+    color: #444;
+}
+
+.item .detail>* {
+    margin: .1em 0;
+}
