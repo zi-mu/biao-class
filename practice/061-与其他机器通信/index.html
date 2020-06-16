@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script src='rq.js'></script>
+    <script>
+        // let url = 'https://api.github.com/search/users?q=zi-mu';
+        // rq.get(url, data => {
+        //     console.log(data);
+        // })
+
+        let url = 'https://api.github.com/search/users?q=zi-mu';
+        rq.get(url, (data) => {
+            console.log(data);
+        })
+    </script>
+</body>
+
+</html>

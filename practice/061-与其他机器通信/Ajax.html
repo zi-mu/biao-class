@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/jquery"></script>
+    <script src="https://unpkg.com/axios@0.18.0/dist/axios.min.js"></script>
+    <title>Ajax</title>
+</head>
+
+<body>
+    <script>
+        ;
+        (function () {
+            'use strict';
+            boot();
+
+            function boot() {
+                /**
+                 * XMLHttpRequest
+                 */
+                // let http = new XMLHttpRequest();
+                // http.open('get', 'https://api.github.com/search/users?q=yo');
+                // http.send();
+
+                // http.addEventListener('load', () => {
+                //     let data = JSON.parse(http.responseText);
+                //     console.log(data);
+                // })
+
+
+
+                /** 
+                    fetch
+                */
+
+                // fetch('https://api.github.com/search/users?q=yo')
+                //     .then(response => {
+                //         return response.json();
+                //     })
+                //     .then(data => {
+                //         console.log(data);
+                //     })
+
+                /**
+                    jQuery get
+                */
+
+                // $.get('https://api.github.com/search/users?q=yo')
+                //     .then(data => {
+                //         console.log(data);
+                //     })
+
+                /**
+                 jQuery Ajax
+                */
+
+                // $.ajax({
+                //         method : "get",
+                //         url: "https://api.github.com/search/users?q=yo",
+                //     })
+                //     .then(data => {
+                //         console.log(data);
+                //     });
+
+                axios.get('https://api.github.com/search/users?q=yo')
+                    .then(r => {
+                        console.log(r);
+                    })
+            }
+
+        })();
+    </script>
+</body>
+
+</html>

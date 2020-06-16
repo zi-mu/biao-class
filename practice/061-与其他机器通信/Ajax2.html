@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src='http://unpkg.com/jquery'></script>
+    <script src="https://unpkg.com/axios@0.18.0/dist/axios.min.js"></script>
+    <title>ajax</title>
+</head>
+
+<body>
+    <script>
+        /***XMLHttpRequest */
+
+        let http = new XMLHttpRequest();
+        http.open('get', 'https://api.github.com/search/users?q=zi-mu');
+        http.send();
+
+        http.addEventListener('load', () => {
+            console.log(JSON.parse(http.responseText));
+        });
+
+        // fetch 
+
+        fetch('https://api.github.com/search/users?q=zi-mu')
+            .then(response => {
+                return response.json();
+            })
+            .then(data => {
+                console.log(data);
+            })
+
+        // jQuery get;
+        $.get('https://api.github.com/search/users?q=zi-mu')
+            .then(data => {
+                console.log(data);
+            })
+
+        // jQuery Ajax;
+
+        $.ajax({
+            method: 'get',
+            url: "https://api.github.com/search/users?q=zi-mu",
+        })
+            .then(data => {
+                console.log(data);
+            });
+
+        // axios
+        axios.get('https://api.github.com/search/users?q=zi-mu')
+            .then(r => {
+                console.log(r);
+            })
+
+    </script>
+</body>
+
+</html>
